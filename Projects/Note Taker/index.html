@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer="" src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="js/userInterface.js"></script>
+</head>
+<body class="has-navbar-fixed-top" onload='load(1)'>
+    <nav class="navbar is-fixed-top is-dark" role="navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="../../index.html">
+            <img src="echang.dev.png" width="150" height="40">
+        </a>
+        <div class="navbar-item">
+            <h2><strong class ="has-text-white">To Do List</strong></h2>
+        </div>
+    </div>
+    <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    <span class="icon is-large">
+                        <i class="fas fa-plus-circle"></i>
+                    </span>
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" onclick="AddFile(currentID, 'Folder')">
+                        Folder
+                    </a>
+                    <a class="navbar-item" onclick="AddFile(currentID, 'Todo')">
+                        To-Do List
+                    </a>
+                    <a class="navbar-item" onclick="AddFile(currentID, 'Note')">
+                        Note
+                    </a>
+                </div>
+            </div>
+
+            <a onclick="Rename()" class="navbar-item">
+                <span class="icon is-large">
+                    <i class="far fa-edit"></i>
+                </span>
+            </a>
+            <a onclick="Remove()" class="navbar-item">
+                <span class="icon is-large">
+                    <i class="fas fa-trash"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-body">
+            <h3 class="title">
+                Directory: <div id="directoryHook"></div>
+            </h3>
+
+        </div>
+    </section>
+
+    <!--<div id="loadHook"> </div>-->
+
+    <div class="container" id="listShow">
+    <table class="table is-hoverable is-fullwidth">
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Icon</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody id="loadHook">
+            <!--<tr>
+                <th><label class="checkbox"><input type="checkbox" onclick="select()"></label></th>
+                <th><i class="fas fa-folder"></i></th>
+                <th><a>Chapter One</a></th>
+            </tr>
+            <tr>
+                <th><label class="checkbox"><input type="checkbox"></label></th>
+                <th><i class="far fa-sticky-note"></i></th>
+                <th><a>Chapter One</a></th>
+            </tr>
+            <tr>
+                <th><label class="checkbox"><input type="checkbox"></label></th>
+                <th><i class="fas fa-list-ul"></i></th>
+                <th><a>Groceries</a></th>
+            </tr>-->
+        </tbody>
+    </table>
+    </div>
+
+    <div class="container" id="todoShow">
+        <table class="table is-hoverable is-fullwidth">
+            <thead>
+            <tr>
+                <th>Actions</th>
+                <th>Name</th>
+                <th>Complete</th>
+                <th><div onclick="addItem()" class="button"><i class="fas fa-plus"></i></div></th>
+            </tr>
+            </thead>
+            <tbody id="toDoHook">
+            <!--<tr>
+                <th><div onclick="complete(id)" class="button"><i class="fas fa-check-square"></i></div><div class="button"><i class="fas fa-edit"></i></div> <div class="button"><i class="fas fa-trash-alt"></i></div></th>
+                <th>Vegetables</th>
+                <th>Yes</th>
+                <th></th>
+            </tr>
+            <tr>
+                <th><div class="button"><i class="fas fa-check-square"></i></div><div class="button"><i class="fas fa-edit"></i></div> <div class="button"><i class="fas fa-trash-alt"></i></div></th>
+                <th>Saturday Shopping</th>
+                <th>No</th>
+                <th></th>
+            </tr>-->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container" id="noteShow">
+        <div id="noteHook"></div>
+        <!--<h1 class="is-size-4"><strong>Chapter One</strong><button class="button is-pulled-right "><i class="fas fa-save"></i></button></h1>
+        <textarea class="textarea" rows="25" id="sample">Text
+        </textarea>-->
+    </div>
+
+</body>
+</html>
+
+<!-- Remove arrow for to do
+Addfile() needs parentID and name in the HTML unless names it untitled and let the user rename-->

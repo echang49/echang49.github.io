@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+//$white-ter : hsl(0, 0%, 96%);
+$grey-darker : hsl(0, 0%, 21%);
+$family-primary : 'Open Sans', sans-serif;
+
+.dropdown {
+    width: 100%;
+  
+    .dropdown-trigger {
+      width: 100%
+    }
+  
+    .button {
+      display: flex;
+      width: 100%;
+      justify-content: space-between
+    }
+  
+}
+.anchor a {
+    position: absolute;
+    left: 0px;
+    top: -63px;
+}
+.anchor {
+    position: relative;
+}
+
+@import "../bulma-0.8.0/bulma.sass";

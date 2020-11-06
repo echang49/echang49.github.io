@@ -67,9 +67,9 @@
             </div>
         </div>
     </div>
-    <div class="hero" id="aboutMe">
+    <div class="hero" id="section1">
         <div class="hero-body">
-            <div class="container">
+            <div id="aboutMe">
                 <div class="image">
                     <img src="./assets/pp.webp" height="400px" width="auto" />
                 </div>
@@ -83,11 +83,7 @@
                     <p>HTML5, CSS3, CSS Frameworks, Sass, JavaScript, React, Express, MongoDB, Java, UI/UX</p>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="hero" id="academicExperience">
-        <div class="hero-body">
-            <div class="container">
+            <div id="academicExperience">
                 <p class="title"><strong>Academic Experience</strong></p>
                 <p class="subtitle">Software Engineering - Western University</p>
                 <details>
@@ -172,57 +168,69 @@
             </div>
         </div>
     </div>
-    <div class="hero is-fullheight" id="portfolio">
+    <div class="hero" id="section2">
         <div class="hero-body">
-            <div class="container">
+            <div id="portfolio">
                 <p class="title">Portfolio</p>
                 <hr />
-                <div class="flex-row">
-                    <div class="flex-column">
-                        <p class="subtitle">Hackathon Projects</p>
-                        <details>
-                            <summary>Hack Western 2020 (London, Ontario)</summary>
-                            <div class="content">
-                                <p>Website that used the city of London's open data portal to predict future demographics of the city by neighbourhood through linear regression. Data points for the city map was seperated through a python script, the linear regression was completed through TensorFlow, a python library. The database for demographics were in the form of csv files. The project used a javascript library named leaflet.js to map the neighbourhoods on Google Maps.</p>
-                                <p>Utilized: HTML5, CSS3, Javascript, Python, Leaflet.js, and Tensorflow</p>
-                            </div>
-                        </details>
-                        <details>
-                            <summary>Citrus Hacks V (Online)</summary>
-                            <div class="content">
-                                <p>Website that lets either the farmer or customer log in through a secure and authenticated server in which the farmer is able to add products, and the customer is able to view all the products from all the farmers in their local area. The customer can then purchase this product and meet in a common point such as parking spot where the delivery will take place. The project was the winner in one of three main tracks of the hackathon.</p>
-                                <p>Utilized: HTML5, Bootstrap, CSS3, JavaScript, Node.js, React, Express.js, Passport.js, MongoDB, and Mongoose.</p>
-                            </div>
-                        </details>
-                        <details>
-                            <summary>HELLO WORLD</summary>
-                            <div class="content">
-                                Lorem ipsum womp womp womp
-                            </div>
-                        </details>
+                <details>
+                    <summary>Personal Project - LingoThyme
+                        <span class="icon is-large">
+                            <a href="https://www.lingothyme.com/">
+                            <i class="fas fa-archive fa-2x"></i>
+                            </a>
+                        </span>
+                    </summary>
+                    <div class="content">
+                        <p>Product that helps people practice written English through responses to prompts and reading others replys. Everyday, there is a new daily writing topic for the users to reply to and they can only reply to the active prompt which as mentioned before, changes daily. The website is mobile responsive, accessible, and uses i18n.</p>
+                        <p>Utilized: HTML5, CSS3, JavaScript, MongoDB, Expressjs, Reactjs, Nodejs, Sass, Bulma.css, Passport.js, and jQuery.</p>
                     </div>
-                    <div class="flex-column">
-                        <p class="subtitle">Personal Projects</p>
-                        <details>
-                            <summary>HELLO WORLD</summary>
-                            <div class="content">
-                                Lorem ipsum womp womp womp
-                            </div>
-                        </details>
-                        <details>
-                            <summary>HELLO WORLD</summary>
-                            <div class="content">
-                                Lorem ipsum womp womp womp
-                            </div>
-                        </details>
-                        <details>
-                            <summary>HELLO WORLD</summary>
-                            <div class="content">
-                                <p>Lorem ipsum womp womp womp</p><p>Lorem ipsum womp womp womp</p><p>Lorem ipsum womp womp womp</p><p>Lorem ipsum womp womp womp</p><p>Lorem ipsum womp womp womp</p>
-                            </div>
-                        </details>
+                </details>
+                <details>
+                    <summary>Hackathon - Hack Western 2020
+                        <span class="icon is-large">
+                            <a href="https://github.com/echang49/FutureDemographics">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </span>
+                    </summary>
+                    <div class="content">
+                        <p>Website that used the city of London's open data portal to predict future demographics of the city by neighbourhood through linear regression. Data points for the city map was seperated through a python script, the linear regression was completed through TensorFlow, a python library. The database for demographics were in the form of csv files. The project used a javascript library named leaflet.js to map the neighbourhoods on Google Maps.</p>
+                        <p>Utilized: HTML5, CSS3, Javascript, Python, Leaflet.js, and Tensorflow.</p>
                     </div>
-                </div>
+                </details>
+                <details>
+                    <summary>Hackathon - Citrus Hacks V (Winner)
+                        <span class="icon is-large">
+                            <a class="mr-5" href="https://devpost.com/software/curbside-farmers">
+                                <i class="fas fa-archive fa-2x"></i>
+                             </a>
+                            <a href="https://github.com/echang49/Farmer-Curbside">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </span>
+                    </summary>
+                    <div class="content">
+                        <p>Website that lets either the farmer or customer log in through a secure and authenticated server in which the farmer is able to add products, and the customer is able to view all the products from all the farmers in their local area. The customer can then purchase this product and meet in a common point such as parking spot where the delivery will take place. The project was the winner in one of three main tracks of the hackathon.</p>
+                        <p>Utilized: HTML5, Bootstrap, CSS3, JavaScript, Node.js, React, Express.js, Passport.js, MongoDB, and Mongoose.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Hackathon - BorderHacks (Winner)
+                        <span class="icon is-large">
+                            <a class="mr-5" href="https://devpost.com/software/ooberplus-b4qmdz">
+                                <i class="fas fa-archive fa-2x"></i>
+                            </a>
+                            <a href="https://github.com/echang49/borderhacks">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </span>
+                    </summary>
+                    <div class="content">
+                        <p>Oober plus is a web app that allows users to find posts created by other users advertising transportation to a specific location at a given time. Users are able to create a profile, sign in, make posts, browse other users’ ads, and view account details.</p>
+                        <p>Utilized: HTML5, CSS3, JavaScript, Reactjs, Tailwind.css, antd, firebase auth, firestore, and nextjs.</p>
+                    </div>
+                </details> 
             </div>
         </div>
         <div class="hero-foot">

@@ -62,7 +62,7 @@ function init() {
 
 
 //hiding and showing the navBar
-document.addEventListener("scroll", (e) => {
+/*document.addEventListener("scroll", (e) => {
 
   let scrolled = document.scrollingElement.scrollTop;
   let position = document.getElementById("aboutMe").offsetTop;
@@ -75,8 +75,8 @@ document.addEventListener("scroll", (e) => {
   }
   /*if(scrolled = position){
     navAnimation();
-  }*/
-});
+  }
+});*/
 
 /*function navAnimation(){
   let scrolled;
@@ -92,3 +92,13 @@ document.addEventListener("scroll", (e) => {
   }, 1000);
 }*/
 
+//making academic experience the same width as about me
+window.onresize = changeSize;
+window.onload = changeSize;
+function changeSize(){
+  let aboutWidth = document.getElementById("aboutMe").clientWidth;
+  let academicWidth = document.getElementById("academicExperience");
+  let portfolioWidth = document.getElementById("portfolio");
+  academicWidth.style.width = aboutWidth.toString().concat('px');
+  portfolioWidth.style.width = aboutWidth.toString().concat('px');
+}

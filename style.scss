@@ -131,6 +131,7 @@ details[open] summary::-webkit-details-marker {
         margin: auto 10px;
         a {
             all: unset;
+            color: $dark;
             &:hover {
                 cursor: pointer;
             }
@@ -163,6 +164,10 @@ details[open] summary::-webkit-details-marker {
     }
 }
 
+.mr-5 {
+    margin-right: 5px;
+}
+
 /* Block */
 #titlehero {
     video{
@@ -173,6 +178,9 @@ details[open] summary::-webkit-details-marker {
         left:0;
         z-index:5;
         object-fit: cover;
+    }
+    .container {
+        margin: auto 15vw;
     }
     .up-front{
         position: relative;
@@ -190,13 +198,14 @@ details[open] summary::-webkit-details-marker {
     }
 }
 
-#aboutMe {
+#section1 {
     background-image: $white;
-    padding-top: 50px;
+    padding: 50px 0;
     .hero-body{
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        padding-bottom: 0px;
-        .container {
+        #aboutMe {
             display: flex;
             flex-direction: row;
             .image{
@@ -215,39 +224,32 @@ details[open] summary::-webkit-details-marker {
                 }
             }
         }
-    }
-}
-
-#academicExperience {
-    .title, .subtitle {
-        margin-bottom: 0.3em;
-    }
-    .hero-body {
-        .container {
-            flex-grow: 1;
-        }
-    }
-    summary {
-        background: #FFBB43;
-        &:hover{
-            background: #FFAF21;
+        #academicExperience {
+            padding-top: 50px;
+            .title, .subtitle {
+                margin-bottom: 0.3em;
+            }
+            summary {
+                background: #FFBB43;
+                &:hover{
+                    background: #FFAF21;
+                }
+            }
         }
     }
 }
 
-#portfolio{
+
+
+#section2{
     background-color: $dark;
     color: $white;
+    padding: 100px 0 50px 0;
    .hero-body {
-       .container{
-           flex-grow: 1;
-           .flex-row{
-               justify-content: space-between;
-               .flex-column{
-                    
-               }
-           }
-       }
+        padding: 0 0 100px 0;
+        margin: 0 50px;
+        display: flex;
+        justify-content: center;
    }
    .hero-foot {
        text-align: center;
@@ -258,13 +260,21 @@ details[open] summary::-webkit-details-marker {
     }
     summary{
         color: $dark;
+        span {
+            float: right;
+            margin-right: 10px;
+            transform: translateY(-5px);
+            a {
+                text-decoration: none;
+                color: $dark!important;
+                &:hover {
+                    color: black!important;
+                }
+            }
+        }
     }
     details{
-        min-width: 37vw;
         text-align: justify;
-        p {
-            max-width: 55ch;
-        }
     }
    
 }

@@ -190,6 +190,7 @@ details[open] summary::-webkit-details-marker {
 
 .navbar .navbar-item a {
   all: unset;
+  color: #363636;
 }
 
 .navbar .navbar-item a:hover {
@@ -242,6 +243,10 @@ details[open] summary::-webkit-details-marker {
           order: 2;
 }
 
+.mr-5 {
+  margin-right: 5px;
+}
+
 /* Block */
 #titlehero video {
   width: 100%;
@@ -252,6 +257,10 @@ details[open] summary::-webkit-details-marker {
   z-index: 5;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#titlehero .container {
+  margin: auto 15vw;
 }
 
 #titlehero .up-front {
@@ -270,19 +279,25 @@ details[open] summary::-webkit-details-marker {
   background: rgba(255, 255, 255, 0.3);
 }
 
-#aboutMe {
+#section1 {
   background-image: white;
-  padding-top: 50px;
+  padding: 50px 0;
 }
 
-#aboutMe .hero-body {
+#section1 .hero-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 0px;
 }
 
-#aboutMe .hero-body .container {
+#section1 .hero-body #aboutMe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,83 +307,92 @@ details[open] summary::-webkit-details-marker {
           flex-direction: row;
 }
 
-#aboutMe .hero-body .container .image {
+#section1 .hero-body #aboutMe .image {
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
   margin: auto 50px auto 0;
 }
 
-#aboutMe .hero-body .container .image img {
+#section1 .hero-body #aboutMe .image img {
   border: 2px solid #363636;
 }
 
-#aboutMe .hero-body .container .description {
+#section1 .hero-body #aboutMe .description {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   max-width: 60ch;
 }
 
-#aboutMe .hero-body .container .description p {
+#section1 .hero-body #aboutMe .description p {
   font-size: 1.3rem;
   text-align: justify;
 }
 
-#academicExperience .title, #academicExperience .subtitle {
+#section1 .hero-body #academicExperience {
+  padding-top: 50px;
+}
+
+#section1 .hero-body #academicExperience .title, #section1 .hero-body #academicExperience .subtitle {
   margin-bottom: 0.3em;
 }
 
-#academicExperience .hero-body .container {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-#academicExperience summary {
+#section1 .hero-body #academicExperience summary {
   background: #FFBB43;
 }
 
-#academicExperience summary:hover {
+#section1 .hero-body #academicExperience summary:hover {
   background: #FFAF21;
 }
 
-#portfolio {
+#section2 {
   background-color: #363636;
   color: white;
+  padding: 100px 0 50px 0;
 }
 
-#portfolio .hero-body .container {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+#section2 .hero-body {
+  padding: 0 0 100px 0;
+  margin: 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#portfolio .hero-body .container .flex-row {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#portfolio .hero-foot {
+#section2 .hero-foot {
   text-align: center;
 }
 
-#portfolio .subtitle {
+#section2 .subtitle {
   font-size: 1.5em !important;
   margin-bottom: 0.5em;
 }
 
-#portfolio summary {
+#section2 summary {
   color: #363636;
 }
 
-#portfolio details {
-  min-width: 37vw;
-  text-align: justify;
+#section2 summary span {
+  float: right;
+  margin-right: 10px;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
-#portfolio details p {
-  max-width: 55ch;
+#section2 summary span a {
+  text-decoration: none;
+  color: #363636 !important;
+}
+
+#section2 summary span a:hover {
+  color: black !important;
+}
+
+#section2 details {
+  text-align: justify;
 }
 /*# sourceMappingURL=style.css.map */

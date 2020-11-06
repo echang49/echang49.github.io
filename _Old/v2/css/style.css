@@ -79,3 +79,11 @@
 #navBar a:hover {
 	background-color: hsl(0, 0%, 21%);
 }
+
+.ml-20 {
+	margin-left: 20px;
+}
+
+.mt-10 {
+	margin-top: 10px;
+}

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> <!--Font Icons-->
+    <link rel="stylesheet" href="css/mystyle.css"> <!--Bulma with custom CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- BULMA <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">-->
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="./scripts/index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png">
+    <title> Edward Chang </title>
+</head>
+<body>
+    <!--Title Page-->
+    <div class="hero is-fullheight" id="titlehero">
+        <video loop muted autoplay preload="auto">
+            <source src="video.m4v" type="video/mp4">
+        </video>
+        <div class="hero-head up-front">
+            <nav class="navbar" role="navigation" id="headNavBar">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="index.html">
+                            <img src="Graphics/echang.dev-dark.png" width="150" height="40">
+                    </a>
+                    <a role="button" class="navbar-burger" data-target="navMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <div id="navMenu" class="navbar-menu">
+                   
+                    <div class="navbar-start">
+                        <span class="navbar-item">
+                            <a href="#aboutMe" class="has-text-dark"><strong>About Me</strong></a> 
+                        </span>
+                        <span class="navbar-item">
+                            <a href="#technicalExpertise" class="has-text-dark"><strong>Technical Expertise</strong></a>
+                        </span>
+                        <span class="navbar-item">
+                            <a href="#portfolio" class="has-text-dark"><strong>Portfolio</strong></a>
+                        </span>
+                        <span class="navbar-item">
+                            <a href="#academicExperience" class="has-text-dark"><strong>Academic Experience</strong></a>
+                        </span>
+                        <span class="navbar-item">
+                            <a href="#hobbies" class="has-text-dark"><strong>Hobbies</strong></a>
+                        </span>
+                        
+                    </div>
+                    <div class="navbar-end">
+                        <span class="navbar-item">
+                            <a href="https://github.com/echang49">
+                                <span class="icon has-text-dark is-large">
+                                    <i class="fab fa-github fa-2x"></i>
+                                </span>
+                            </a>
+                        </span>
+                        <span class="navbar-item">
+                            <a href="https://www.linkedin.com/in/edwardchang2000/">
+                                <span class="icon has-text-dark is-large">
+                                    <i class="fab fa-linkedin fa-2x"></i>
+                                </span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="hero-body up-front">
+            <div class="container">
+                <!--<strong class="is-size-1" onload="textLoading('echang.dev', 0)" id="titleText">Welcome to my website</strong>-->
+                <strong class="is-size-1 has-text-dark">EDWARD CHANG | 
+                    <span class="txt-type" data-wait="1000" data-words='["UI/UX","HTML","CSS","Java","JavaScript","React"]'></span>
+                </strong>
+                
+                <div class="buttons">
+                    <h2 class="is-size-3">Software Developer</h2>
+                    <a class="button is-dark is-rounded ml-20 mt-10" href="resume.pdf">Resume</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--NavBar-->
+    <nav class="navbar is-dark is-fixed-top" style="display: none" role="navigation" id="navBar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                    <img src="Graphics/echang.dev.png" width="150" height="40">
+            </a>
+            <a role="button" class="navbar-burger" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div id="navMenu" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#aboutMe" class="navbar-item"><strong>About Me</strong></a> 
+                <a href="#technicalExpertise" class="navbar-item"><strong>Technical Expertise</strong></a>
+                <a href="#portfolio" class="navbar-item"><strong>Portfolio</strong></a>
+                <a href="#academicExperience" class="navbar-item"><strong>Academic Experience</strong></a>
+                <a href="#hobbies" class="navbar-item"><strong>Hobbies</strong></a>
+            </div>
+            <div class="navbar-end">
+                <span class="navbar-item">
+                    <a href="https://github.com/echang49">
+                        <span class="icon has-text-success is-large">
+                            <i class="fab fa-github fa-2x"></i>
+                        </span>
+                    </a>
+                </span>
+                <span class="navbar-item">
+                    <a href="https://www.linkedin.com/in/edwardchang2000/">
+                        <span class="icon has-text-link is-large">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </span>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <script>
+        $(document).ready(function() { // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function() {// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+            });
+          });
+    </script>
+    <div class="hero is-large header-image" id="aboutMe">
+        <div class="hero-body">
+            <div class="container">
+                <div class="box box-padding box-transparent">
+                    <div class="columns is-vcentered is-variable is-5">
+                        <div class="column  is-one-third">
+                            <figure class="image">
+                                <img src="Graphics/test_photo_crop.png">
+                            </figure>
+                        </div>
+                        <div class="column">
+                            <p class="is-size-1 has-text-dark"><strong>About Me</strong></p>
+                            <h3 class="content is-size-5-touch is-size-4-desktop has-text-justified has-text-dark">
+                                Student by <strong>day</strong>, dreamer by <strong>night</strong>. Once I have a <strong>goal</strong> in mind, I set out to <strong>accomplish</strong> it. 
+                                I have an <strong>entrepreneurial</strong> mind that always thinks of how something can be <strong>optimized</strong>. Besides obtaining technical skills which will be featured in the next section, 
+                                I am an <strong>extroverted</strong> and <strong>adaptable</strong>.
+                            </h3>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero is-large header-image2" id="technicalExpertise">
+        <div class="hero-body">
+            <div class="container">
+                <p class="is-size-2"><strong>Technical Expertise</strong></p>
+                <h1 class="title is-4">Skills</h1>
+                <h2 class="content is-6">HTML, CSS, CSS Frameworks, Sass, Javascript(ES6), React, Java (GUI), UI/UX, Algorithm Analysis, Logic, RESTful API's, database (csv)</h2>
+                <h1 class="title is-4">Certificates</h1>
+                <h2 class="content is-6">Accessibility in Service<br>Worker Health and Safety Awareness<br>WHMIS<br>First Aid Certificate (Expired)</h2>
+            </div>
+        </div>
+    </div>
+    <div class="hero is-large header-image3" id="portfolio">
+        <div class="hero-body">
+            <div class="container box box-padding header-image4">
+                <h1 class="is-size-2">
+                    <strong>Portfolio <span class="icon is-large"><i class="far fa-folder-open"></i></span></strong>
+                </h1>
+                <div class="columns is-desktop">
+                    <div class="column">
+                        <h1 class="title is-4 has-text-weight-bold">School Projects</h1>
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <button class="button">
+                                    <span>Algorithm Analysis Assignment 3</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <p>A java algorithm that can perform breadth first searches and depth first searches with a graph.
+                                        Utilized in this assignments were graphs, hash maps, linked lists, nodes, queues, and stacks.
+                                        </p>
+                                    </div>
+                                    <hr class="dropdown-divider">
+                                    <div class="dropdown-item">
+                                        <span class="icon has-text-success is-large">
+                                            <a href="https://github.com/echang49/Algorithm-Analysis-Assignment-3">
+                                            <i class="fab fa-github fa-2x"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <button class="button">
+                                    <span>Javascript Assignment</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <p>Program that grabs the users predicted spending for the year and balances the expenses so that it's feasible.
+                                        Utilizes modules, promises, higher order functions, errors, nested arrays, loops and objects. </p>
+                                    </div>
+                                    <hr class="dropdown-divider">
+                                    <div class="dropdown-item">
+                                        <span class="icon has-text-success is-large">
+                                            <a href="https://github.com/echang49/SE2202-Javascript-Assignment">
+                                            <i class="fab fa-github fa-2x"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <button class="button">
+                                    <span>2D Platformer Game</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <p>Game that has multiple game levels with character progression, progress measure, animations, enemies, player movement, combat, character customization, and more features.                                            Utilizes Unity game development, and intermediate C#.
+                                            Program that grabs the users predicted spending for the year and balances the expenses so that it's feasible.</p>
+                                    </div>
+                                    <hr class="dropdown-divider">
+                                    <div class="dropdown-item">
+                                        <span class="icon has-text-success is-large">
+                                            <a href="https://github.com/echang49/H6N9">
+                                            <i class="fab fa-github fa-2x"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                            <h1 class="title is-4 has-text-weight-bold">Hackathon Projects</h1><!--Year = Season-->
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger">
+                                    <button class="button">
+                                        <span>HACKED 2019 (Edmonton, Alberta)</span>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-content">
+                                        <div class="dropdown-item">
+                                            <p>Google Chrome extension that served as a 'parental control' app which would serve as an upgraded browser
+                                            history. The app would look at what website the user would be on and how long the user was on it. Utilized HTML, CSS, and Javascript.
+                                            This hackathon personally allowed me to develop my ability to work as a team since the entire hackathon was in Edmonton and they allowed
+                                            me to hack from the comfort of my home in London.</p>
+                                        </div>
+                                        <hr class="dropdown-divider">
+                                        <div class="dropdown-item">
+                                            <span class="icon has-text-success is-large">
+                                                <a href="https://github.com/echang49/Internet-Tracker-Google-Chrome-Extenstion-">
+                                                <i class="fab fa-github fa-2x"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger">
+                                    <button class="button">
+                                        <span>BrickHacks 2019 (Rochester, New York)</span>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-content">
+                                        <div class="dropdown-item">
+                                            <p>Musical virtual reality game similar to that of beatsaber. Utilized a game controller to hit the beats
+                                            and the VR headset was used to look around to see where the beats were coming in from. The programming of the beats was calculated through a
+                                            beat detection program. The program was built in Unity and customized through C#.</p>
+                                        </div>
+                                        <hr class="dropdown-divider">
+                                        <div class="dropdown-item">
+                                            Program too big to be hosted on github (100 MB)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger">
+                                    <button class="button">
+                                        <span>Hack Western 2020 (London, Ontario)</span>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-content">
+                                        <div class="dropdown-item">
+                                            <p>Website that used the city of London's open data portal to predict future demographics of the city by
+                                            neighbourhood through linear regression. Data points for the city map was seperated through a python script, the linear regression was
+                                            completed through TensorFlow, a python library. The database for demographics were in the form of csv files. The project used a javascript
+                                            library named leaflet.js to map the neighbourhoods on Google Maps. Utilized HTML, CSS, Javascript, Python, Leaflet.js, and Tensorflow.</p>
+                                        </div>
+                                        <hr class="dropdown-divider">
+                                        <div class="dropdown-item">
+                                            <span class="icon has-text-success is-large">
+                                                <a href="https://github.com/echang49/FutureDemographics">
+                                                <i class="fab fa-github fa-2x"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown is-hoverable">
+                                <div class="dropdown-trigger">
+                                    <button class="button">
+                                        <span>Citrus Hacks V (Online) - Winner</span>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-content">
+                                        <div class="dropdown-item">
+                                            <p>Website that lets either the farmer or customer log in through a secure and authenticated server in which the farmer is able to add products, 
+                                                and the customer is able to view all the products from all the farmers in their local area. The customer can then purchase this product and meet 
+                                                in a common point such as parking spot where the delivery will take place. The project was the winner in one of three main tracks of the hackathon.
+                                                The project was made with HTML5, Bootstrap, CSS3, JavaScript, node.js, React, Express.js, Passport.js, MongoDB, and Mongoose.</p>
+                                        </div>
+                                        <hr class="dropdown-divider">
+                                        <div class="dropdown-item">
+                                            <span class="icon has-text-success is-large">
+                                                <a href="https://github.com/echang49/Farmer-Curbside">
+                                                <i class="fab fa-github fa-2x"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="column">
+                        <h1 class="title is-4 has-text-weight-bold">Personal Projects</h1>
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <button class="button">
+                                    <span>Travel Website (WORK IN PROGRESS)</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <p>Wordpress website that provides travel information on certain travel destinations and a javascript algorithm
+                                        that sees how cheap it costs to go on vacation there. Built with Wordpress and utilizes PHP, Javascript, CSS, HTML, and coding libraries like 
+                                        Advanced Custom Fields Pro.</p>
+                                    </div>
+                                    <hr class="dropdown-divider">
+                                    <div class="dropdown-item">
+                                        Still being developed. Not ready for release.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <button class="button">
+                                    <span>Note Taker</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <p>Note taker web application that has a file taxonomy system, to-do lists and notes. This "upgraded" to-do list project was made
+                                            as it's a good metric for coding skill but I wanted to make something I would personally use. Utilized HTML, CSS, JavaScript, JSON, and Require.js.</p>
+                                    </div>
+                                    <hr class="dropdown-divider">
+                                    <div class="dropdown-item">
+                                        <span class="icon has-text-success is-large">
+                                            <a href="https://github.com/echang49/FutureDemographics">
+                                            <i class="fab fa-github fa-2x"></i>
+                                            </a>
+                                        </span>
+                                        <span class="icon is-large">
+                                            <a class="has-text-dark" href="Projects/Note Taker/index.html">
+                                            <i class="fas fa-archive fa-2x"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <button class="button">
+                                    <span>Lingo Thyme Website</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <p>Static HTML website for a business that teaches English in a better method than typical competitors. Built using modern UI/UX, HTML, sass, Bulma.css, and jQuery.</p>
+                                    </div>
+                                    <hr class="dropdown-divider">
+                                    <div class="dropdown-item">
+                                        <span class="icon is-large">
+                                            <a class="has-text-dark" href="https://www.lingothyme.com/">
+                                            <i class="fas fa-archive fa-2x"></i>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero is-large header-image5" id="academicExperience">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="is-size-2">
+                    <strong>Academic Experience <span class="icon is-large"><i class="fas fa-book"></i></span></strong>
+                </h1>
+                <h1 class="title is-4">Software Engineering - Western University</h1>
+                <h2 class="content is-6"><strong>Year One:</strong> Programming Fundamentals (Java & MATLAB), Calculus, Linear Algebra, Design, Statics, Business, Physics, Chemistry</h2>
+                <h2 class="content is-6"><strong>Year Two:</strong> Scripting Fundamentals (Javascript), Logic, Discrete Math, Algorithm Analysis, Calculus, Statistics, Design, Electrical Engineering Fundamentals, Communication, Software Construction</h2>
+                <h2 class="content is-6"><strong>Cocurricular Record:</strong> Leadership Education Program Tier 1 Certificate, Indigenous Allies Society (First Year Representative), <br>
+                    Engineering in Action (Marketing Comittee), Kappa Sigma (Pledge Educator, Rush Leader) International Week Promotions Volunteer</h2>
+                <h1 class="title is-4">Fanshawe College - Travel Studies</h1>
+                <h2 class="content is-6"><strong>Year One:</strong> Tour Industry, Flights, Business Operations, Hospitality</h2>
+                <h1 class="title is-4">Unofficial Transcript Upon Request</h1>
+            </div>
+        </div>
+    </div>
+    <div class="hero is-large header-image6" id="hobbies">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="is-size-2">
+                    <strong>Hobbies <span class="icon is-large"><i class="fas fa-gamepad"></i></span></strong>
+                </h1>
+                <div class="columns is-desktop">
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img src="Graphics/Perfume.png" alt="Perfume">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h1 class="is-4">Perfumery</h1>
+                                    A hobby since high school, I self-taught byself how to make perfume. My interest
+                                    in making perfume stemmed from not being able to find the perfect perfume for myself.
+                                    I currently have a few perfumes that I would classify done.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="is-3by2">
+                                    <img src="Graphics/Photography.png" alt="Photography">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h1 class="is-4">Photography</h1>
+                                    Interested in photography and graphic design since I was little, I have practiced enough to have
+                                    a photograph displayed in an art gallery. Seeing beautiful place made me want to document it and this
+                                    hobby links with travel.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img src="Graphics/Travel.png" alt="Travel">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h1 class="is-4">Travel</h1>
+                                    With a love for exploring since I was a kid, I would explore around my city in Grade 9 only to travel around Canada
+                                    and the world now. Some places I have been are the provinces of Canada, the Caribbean, America, and China.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-3by2">
+                                    <img src="Graphics/Video_Games.png" alt="Video Games">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                    <h1 class="is-4">Video Games</h1>
+                                    A fun outlet to studying from school work, I currently play Counter Strike: Global Offensive, League of Legends
+                                    and Fortnite. I love multiplayer games as it requires high levels of strategy, planning and attention to detail to excel.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

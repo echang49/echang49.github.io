@@ -199,7 +199,7 @@ details[open] summary::-webkit-details-marker {
 }
 
 #section1 {
-    background-image: $white;
+    background-color: $white;
     padding: 50px 0;
     .hero-body{
         display: flex;
@@ -224,10 +224,10 @@ details[open] summary::-webkit-details-marker {
                 }
             }
         }
-        #academicExperience {
+        #professionalExperience {
             padding-top: 50px;
-            .title, .subtitle {
-                margin-bottom: 0.3em;
+            hr {
+                margin-bottom: 1em;
             }
             summary {
                 background: #FFBB43;
@@ -235,29 +235,25 @@ details[open] summary::-webkit-details-marker {
                     background: #FFAF21;
                 }
             }
+            details p {
+                text-align: justify;
+            }
         }
     }
 }
 
-
-
 #section2{
-    background-color: $dark;
-    color: $white;
-    padding: 100px 0 50px 0;
-   .hero-body {
-        padding: 0 0 100px 0;
-        margin: 0 50px;
+    background-color: #FFBB43;
+    padding: 50px 0;
+    .hero-body{
         display: flex;
+        flex-direction: column;
         justify-content: center;
-   }
-   .hero-foot {
-       text-align: center;
-   }
-   .subtitle{
-        font-size: 1.5em!important;
+    }
+   .title{
         margin-bottom: 0.5em;
     }
+
     summary{
         color: $dark;
         span {
@@ -273,8 +269,34 @@ details[open] summary::-webkit-details-marker {
             }
         }
     }
-    details{
+    details p{
         text-align: justify;
+        font-weight: 700;
+    }
+}
+
+#section3{
+    background-color: $dark;
+    color: $white;
+    padding: 100px 0 50px 0;
+   .hero-body {
+        padding: 0 0 100px 0;
+        margin: 0 50px;
+        display: flex;
+        justify-content: center;
+   }
+   .hero-foot {
+       text-align: center;
+   }
+   .title, .subtitle {
+        margin-bottom: 0.3em;
+    }
+    summary {
+        background: $white;
+        color: $dark;
+        &:hover{
+            background: $light;
+        }
     }
    
 }

@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-UK">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> <!--Font Icons-->
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/favicon.png">
+
     <title> Edward Chang </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Edward Chang's portfolio with prior work exerience, acadedmic courses, personal projects, and his resume." />
+    <meta name="title" property="og:title" content="Edward Chang's Portfolio" />
+    <meta property="og:type" content="portfolio" />
+    <meta name="image" property="og:image" content="./assets/portfolio.jpg" />
+    <meta name="description" property="og:description" content="Edward Chang's portfolio with prior work exerience, acadedmic courses, personal projects, and his resume." />
+    <meta name="author" content="Edward Chang" />
 </head>
 <body>
     <div class="hero is-fullheight" id="titlehero">
@@ -28,10 +35,13 @@
                             <a href="#aboutMe"><strong>About Me</strong></a> 
                         </span>
                         <span class="navbar-item">
-                            <a href="#academicExperience"><strong>Academic Experience</strong></a>
+                            <a href="#professionalExperience"><strong>Professional Experience</strong></a> 
                         </span>
                         <span class="navbar-item">
                             <a href="#portfolio"><strong>Portfolio</strong></a>
+                        </span>
+                        <span class="navbar-item">
+                            <a href="#academicExperience"><strong>Academic Experience</strong></a>
                         </span>
                     </div>
                     <div class="navbar-end">
@@ -57,7 +67,7 @@
             <div class="container">
                 <!--<strong class="is-size-1" onload="textLoading('echang.dev', 0)" id="titleText">Welcome to my website</strong>-->
                 <strong class="title">EDWARD CHANG | 
-                    <span class="txt-type" data-wait="1000" data-words='["UI/UX","HTML","CSS","Java","JavaScript","React"]'></span>
+                    <span class="txt-type" data-wait="1000" data-words='["Full Stack Web Dev","Salesforce","Enterprise"]'></span>
                 </strong>
                 
                 <div class="flex-row">
@@ -80,11 +90,109 @@
                         Once I have a <strong>goal</strong> in mind, I set out to <strong>accomplish</strong> it. 
                     </p>
                     <p class="subtitle"><strong>Skills</strong></p>
-                    <p>HTML5, CSS3, CSS Frameworks, Sass, JavaScript, React, Express, MongoDB, Java, UI/UX</p>
+                    <p>HTML5 (Semantic & Accessible), CSS3, Sass, JavaScript, React.js, Express.js, MongoDB, Java, Apex, Python, C++ Linux, AWS, Git, SQL</p>
                 </div>
             </div>
+            <div id="professionalExperience">
+                <p class="title"><strong>Professional Experience</strong></p>
+                <hr />
+                <details>
+                    <summary>Square Enix - Online Services Programmer Intern</summary>
+                    <p>Building an internal web service tool that tracks player in-game progress across multiple game platforms to be used for telemetry purposes. Resulting in every internal and external game development team having basic out of the box telemetry allowing them to make major decisions easier.</p>
+                    <p>Developed in an agile environment with daily scrum meetings, sprints, etc.</p>
+                    <p>Utilized Java, C++, Perforce.</p>
+                </details>
+                <details>
+                    <summary>Traction on Demand - Develpoment Intern</summary>
+                    <p>Built different parts of custom Salesforce solutions for clients depending on the project stage. Tasks varied from documentation, development, unit tests, and debugging. Consistently pushed high quality work underestimated timelines resulting in added productivity elsewhere on the project or a lower client bill.</p>
+                    <p>Utilized Salesforce Administrator Platform, Apex, JavaScript, HTML, and CSS.</p>
+                </details>
+                <details>
+                    <summary>Daily Dose - Web Developer and Designer</summary>
+                    <p>Built custom web pages resulting in more engagement and sales from potential customers.</p>
+                    <p>Created scripts that help other employees automate repetitive mundane tasks resulting in increased employee efficiency.</p>
+                    <p>Utilized HTML, SASS, JavaScript, Shopify Liquid, and PowerShell.</p>
+                </details>
+                <details>
+                    <summary>LingoThyme - Technical Cofounder</summary>
+                    <p>Built out the company’s technical needs which included innovating and developing products resulting in the company being ready for market-testing.</p>
+                    <p>Architecting company technical direction which included developing minimal market solutions, scalable implementations, and a company roadmap.</p>
+                    <p>Provided quality mentorship for company interns. Created a better work environment and sped up their learning process, resulting in releasing a well-made product for the company ahead of schedule.</p>
+                    <p>Utilized React, Express, NodeJS, socketIO, MongoDB, Firebase, and SASS.</p>
+                </details>
+            </div>
+        </div>
+    </div>
+    <div class="hero" id="section2">
+        <div class="hero-body">
+            <div id="portfolio">
+                <p class="title">Portfolio</p>
+                
+                <details>
+                    <summary>Hackathon - Hack Western 8 (Winner)
+                        <span class="icon is-large">
+                            <a href="https://devpost.com/software/circle-5m1tn3">
+                            <i class="fas fa-archive fa-2x"></i>
+                            </a>
+                        </span>
+                    </summary>
+                    <div class="content">
+                        <p>A mobile app that provides users with an alternative solution to traditional payment methods with the introduction of NFC cryptocurrency payments. Through the tap between two iOS or Android mobile devices, money can be transferred directly and instantaneously between digital wallets, similar to the concept of e-transfer.</p>
+                        <p>Utilized: Reactjs, Ionic, Coinbase API, NFC Technology.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Hackathon - Hack Western 7
+                        <span class="icon is-large">
+                            <a href="https://github.com/echang49/SimpleInvest">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </span>
+                    </summary>
+                    <div class="content">
+                        <p>A web app made to help people without experience in the stock market invest their money efficiently.</p>
+                        <p>Utilized: JavaScript, React, Express.js, Node.js, HTML5, CSS3, Sass, Tailwind CSS, Ant Design, Firebase, and Firestore.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Hackathon - Citrus Hacks V (Winner)
+                        <span class="icon is-large">
+                            <a class="mr-5" href="https://devpost.com/software/curbside-farmers">
+                                <i class="fas fa-archive fa-2x"></i>
+                             </a>
+                            <a href="https://github.com/echang49/Farmer-Curbside">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </span>
+                    </summary>
+                    <div class="content">
+                        <p>Website that lets either the farmer or customer log in through a secure and authenticated server in which the farmer is able to add products, and the customer is able to view all the products from all the farmers in their local area. The customer can then purchase this product and meet in a common point such as parking spot where the delivery will take place. The project was the winner in one of three main tracks of the hackathon.</p>
+                        <p>Utilized: HTML5, Bootstrap, CSS3, JavaScript, Node.js, React, Express.js, Passport.js, MongoDB, and Mongoose.</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>Hackathon - BorderHacks (Winner)
+                        <span class="icon is-large">
+                            <a class="mr-5" href="https://devpost.com/software/ooberplus-b4qmdz">
+                                <i class="fas fa-archive fa-2x"></i>
+                            </a>
+                            <a href="https://github.com/echang49/borderhacks">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </span>
+                    </summary>
+                    <div class="content">
+                        <p>Oober plus is a web app that allows users to find posts created by other users advertising transportation to a specific location at a given time. Users are able to create a profile, sign in, make posts, browse other users’ ads, and view account details.</p>
+                        <p>Utilized: HTML5, CSS3, JavaScript, Reactjs, Tailwind.css, antd, firebase auth, firestore, and nextjs.</p>
+                    </div>
+                </details> 
+            </div>
+        </div>
+    </div>
+    <div class="hero" id="section3">
+        <div class="hero-body">
             <div id="academicExperience">
-                <p class="title"><strong>Academic Experience</strong></p>
+                <p class="title"><strong>Academic Experience</strong></p> 
                 <p class="subtitle">Software Engineering - Western University</p>
                 <details>
                     <summary>Year One</summary>
@@ -135,106 +243,61 @@
                         <li>SE3353 - Human Computer Interface Design</li>
                     </ul>
                 </details>
+                <details>
+                    <summary>Year Four</summary>
+                    <ul>
+                        <li>COMPSCI4442 - Artificial Intelligence II</li>
+                        <li>ENGSCI3351 - Engineering Internship</li>
+                        <li>ENGSCI3352 - Engineering Co-op</li>
+                        <li>ENGSCI4498 - Engineering Ethics, Sustainable Development and the Law</li>
+                        <li>SE4455 - Cloud Computing</li>
+                        <li>SE4472 - Information Security</li>
+                    </ul>
+                </details>
                 <p class="subtitle">Fanshawe College - Travel and Tourism</p>
                 <details>
                     <summary>Year One</summary>
                     <ul>
-                        <li>TRAV1030 - Transportation & Hospitality</li>
-                        <li>TRAV1029 - The Tour Industry</li>
-                        <li>COMM1129 - Workplace Writing Skills</li>
-                        <li>TRAV3015 - Flights & Fares</li>
                         <li>BUSI1169 - Travel Business Operations</li>
-                        <li>DEVL1046 - Career Strategies</li>
-                        <li>TRAV1033 - Fundamentals of Travel</li>
-                        <li>TRAV1027 - Destination Geography</li>
+                        <li>COMM1129 - Workplace Writing Skills</li>
                         <li>COMP1512 - Travel Systems & Software</li>
-                        <li>TRAV1028 - Attractions & Tourism</li>
-                        <li>TOUR1009 - Sales & Customer Service</li>
+                        <li>DEVL1046 - Career Strategies</li>
                         <li>MMED1065 - Emerging Technology Trends</li>
+                        <li>TOUR1009 - Sales & Customer Service</li>
+                        <li>TRAV1027 - Destination Geography</li>
+                        <li>TRAV1028 - Attractions & Tourism</li>
+                        <li>TRAV1029 - The Tour Industry</li>
+                        <li>TRAV1030 - Transportation & Hospitality</li>
+                        <li>TRAV1033 - Fundamentals of Travel</li>
+                        <li>TRAV3015 - Flights & Fares</li>
                     </ul>
                 </details>
                 <details>
                     <summary>Year Two</summary>
                     <ul>
+                        <li>ANTH1012 - Cultural Anthropology</li>
                         <li>BEVR1004 - Wines of the World</li>
+                        <li>COOP1020 - Co-op Education Employment Prep</li>
+                        <li>GEOG1006 - Discover North America</li>
                         <li>GEOG3002 - World Destinations 1</li>
                         <li>FINA3046 - Finance & Business Operations</li>
+                        <li>MKTG1059 - Marketing for Tourism & Hospitality</li>
+                        <li>POLI1018 - Pirates, Smuggling & Undergrnd Economies</li>
                         <li>TOUR1011 - Tourism Certifications</li>
-                        <li>GEOG1006 - Discover North America</li>
-                        <li>ANTH1012 - Cultural Anthropology</li>
-                        <li>COOP1020 - Co-op Education Employment Prep</li>
+                        <li>TOUR3001 - Group Tour Management</li>
+                        <li>TRAV1013 - Industry Insight</li>
+                        <li>TRAV1017 - International Field Study</li>
+                        <li>TRAV1035 - Front Office Applications</li>
+                        <li>TRAV3011 - Exploring Retail Travel</li>
+                        <li>TRAV3012 - Global Distribution</li>
+                        <li>TRAV3014 - Flights & Fares 2</li>
+                        <li>WRIT1030 - Reason & Writing 1</li>
                     </ul>
                 </details>
             </div>
         </div>
-    </div>
-    <div class="hero" id="section2">
-        <div class="hero-body">
-            <div id="portfolio">
-                <p class="title">Portfolio</p>
-                <hr />
-                <details>
-                    <summary>Personal Project - LingoThyme
-                        <span class="icon is-large">
-                            <a href="https://www.lingothyme.com/">
-                            <i class="fas fa-archive fa-2x"></i>
-                            </a>
-                        </span>
-                    </summary>
-                    <div class="content">
-                        <p>Product that helps people practice written English through responses to prompts and reading others replys. Everyday, there is a new daily writing topic for the users to reply to and they can only reply to the active prompt which as mentioned before, changes daily. The website is mobile responsive, accessible, and uses i18n.</p>
-                        <p>Utilized: HTML5, CSS3, JavaScript, MongoDB, Expressjs, Reactjs, Nodejs, Sass, Bulma.css, Passport.js, and jQuery.</p>
-                    </div>
-                </details>
-                <details>
-                    <summary>Hackathon - Hack Western 2020
-                        <span class="icon is-large">
-                            <a href="https://github.com/echang49/SimpleInvest">
-                                <i class="fab fa-github fa-2x"></i>
-                            </a>
-                        </span>
-                    </summary>
-                    <div class="content">
-                        <p>A web app made to help people without experience in the stock market invest their money efficiently.</p>
-                        <p>Utilized: JavaScript, React, Express.js, Node.js, HTML5, CSS3, Sass, Tailwind CSS, Ant Design, Firebase, and Firestore.</p>
-                    </div>
-                </details>
-                <details>
-                    <summary>Hackathon - Citrus Hacks V (Winner)
-                        <span class="icon is-large">
-                            <a class="mr-5" href="https://devpost.com/software/curbside-farmers">
-                                <i class="fas fa-archive fa-2x"></i>
-                             </a>
-                            <a href="https://github.com/echang49/Farmer-Curbside">
-                                <i class="fab fa-github fa-2x"></i>
-                            </a>
-                        </span>
-                    </summary>
-                    <div class="content">
-                        <p>Website that lets either the farmer or customer log in through a secure and authenticated server in which the farmer is able to add products, and the customer is able to view all the products from all the farmers in their local area. The customer can then purchase this product and meet in a common point such as parking spot where the delivery will take place. The project was the winner in one of three main tracks of the hackathon.</p>
-                        <p>Utilized: HTML5, Bootstrap, CSS3, JavaScript, Node.js, React, Express.js, Passport.js, MongoDB, and Mongoose.</p>
-                    </div>
-                </details>
-                <details>
-                    <summary>Hackathon - BorderHacks (Winner)
-                        <span class="icon is-large">
-                            <a class="mr-5" href="https://devpost.com/software/ooberplus-b4qmdz">
-                                <i class="fas fa-archive fa-2x"></i>
-                            </a>
-                            <a href="https://github.com/echang49/borderhacks">
-                                <i class="fab fa-github fa-2x"></i>
-                            </a>
-                        </span>
-                    </summary>
-                    <div class="content">
-                        <p>Oober plus is a web app that allows users to find posts created by other users advertising transportation to a specific location at a given time. Users are able to create a profile, sign in, make posts, browse other users’ ads, and view account details.</p>
-                        <p>Utilized: HTML5, CSS3, JavaScript, Reactjs, Tailwind.css, antd, firebase auth, firestore, and nextjs.</p>
-                    </div>
-                </details> 
-            </div>
-        </div>
         <div class="hero-foot">
-            <p>Version 3.3</p>
+            <p>Version 3.5</p>
         </div>
     </div>
 </body>

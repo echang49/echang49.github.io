@@ -280,7 +280,7 @@ details[open] summary::-webkit-details-marker {
 }
 
 #section1 {
-  background-image: white;
+  background-color: white;
   padding: 50px 0;
 }
 
@@ -330,45 +330,45 @@ details[open] summary::-webkit-details-marker {
   text-align: justify;
 }
 
-#section1 .hero-body #academicExperience {
+#section1 .hero-body #professionalExperience {
   padding-top: 50px;
 }
 
-#section1 .hero-body #academicExperience .title, #section1 .hero-body #academicExperience .subtitle {
-  margin-bottom: 0.3em;
+#section1 .hero-body #professionalExperience hr {
+  margin-bottom: 1em;
 }
 
-#section1 .hero-body #academicExperience summary {
+#section1 .hero-body #professionalExperience summary {
   background: #FFBB43;
 }
 
-#section1 .hero-body #academicExperience summary:hover {
+#section1 .hero-body #professionalExperience summary:hover {
   background: #FFAF21;
 }
 
+#section1 .hero-body #professionalExperience details p {
+  text-align: justify;
+}
+
 #section2 {
-  background-color: #363636;
-  color: white;
-  padding: 100px 0 50px 0;
+  background-color: #FFBB43;
+  padding: 50px 0;
 }
 
 #section2 .hero-body {
-  padding: 0 0 100px 0;
-  margin: 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-#section2 .hero-foot {
-  text-align: center;
-}
-
-#section2 .subtitle {
-  font-size: 1.5em !important;
+#section2 .title {
   margin-bottom: 0.5em;
 }
 
@@ -392,7 +392,42 @@ details[open] summary::-webkit-details-marker {
   color: black !important;
 }
 
-#section2 details {
+#section2 details p {
   text-align: justify;
+  font-weight: 700;
+}
+
+#section3 {
+  background-color: #363636;
+  color: white;
+  padding: 100px 0 50px 0;
+}
+
+#section3 .hero-body {
+  padding: 0 0 100px 0;
+  margin: 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#section3 .hero-foot {
+  text-align: center;
+}
+
+#section3 .title, #section3 .subtitle {
+  margin-bottom: 0.3em;
+}
+
+#section3 summary {
+  background: white;
+  color: #363636;
+}
+
+#section3 summary:hover {
+  background: #e6e6e6;
 }
 /*# sourceMappingURL=style.css.map */

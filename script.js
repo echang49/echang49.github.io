@@ -97,8 +97,10 @@ window.onresize = changeSize;
 window.onload = changeSize;
 function changeSize(){
   let aboutWidth = document.getElementById("aboutMe").clientWidth;
+  let professionalWidth = document.getElementById("professionalExperience");
   let academicWidth = document.getElementById("academicExperience");
   let portfolioWidth = document.getElementById("portfolio");
+  professionalWidth.style.width = aboutWidth.toString().concat('px');
   academicWidth.style.width = aboutWidth.toString().concat('px');
   portfolioWidth.style.width = aboutWidth.toString().concat('px');
 }

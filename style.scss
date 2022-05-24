@@ -101,10 +101,7 @@ details[open] summary::-webkit-details-marker {
 .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    @media screen and (max-width: 900px){
-        justify-content: space-between;
-    }
+    justify-content: space-between;
     padding: 25px 30px;
     flex-wrap: nowrap;
     .navbar-brand{
@@ -114,21 +111,10 @@ details[open] summary::-webkit-details-marker {
         order: 1;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        @media screen and (min-width: 901px){
-            flex-grow: 1; 
-        }
-        .navbar-start{
-            @media screen and (max-width: 900px){
-                display: none;
-            }
-        }
-        .navbar-end{
-            transform: translate(0, -5px);
-        }
+        align-items: center;
     }
     .navbar-item{
-        margin: auto 10px;
+        margin: auto 15px;
         a {
             all: unset;
             color: $light;

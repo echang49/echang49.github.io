@@ -1,2 +1,10 @@
-make mobile responsive 
-turn resume into a latex that can be easily parsable into machines
+Changes for V4:
+    Move LingoThyme to Projects
+    Add CV-Creator, Plannr and (maybe grimage.js). Could just link Devpost
+    Edit about me
+    Move from granim.js to grimage.js
+    Add animations with anime.js
+    Redesign portfolio & Projects
+    Make mobile responsive 
+    Change logo & favicon
+    (If using tailwind or something else, delete unused css and js)

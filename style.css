@@ -127,20 +127,12 @@ details[open] summary::-webkit-details-marker {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 25px 30px;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-}
-
-@media screen and (max-width: 900px) {
-  .navbar {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
 }
 
 .navbar .navbar-brand {
@@ -160,32 +152,13 @@ details[open] summary::-webkit-details-marker {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media screen and (min-width: 901px) {
-  .navbar .navbar-menu {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .navbar .navbar-menu .navbar-start {
-    display: none;
-  }
-}
-
-.navbar .navbar-menu .navbar-end {
-  -webkit-transform: translate(0, -5px);
-          transform: translate(0, -5px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar .navbar-item {
-  margin: auto 10px;
+  margin: auto 15px;
 }
 
 .navbar .navbar-item a {

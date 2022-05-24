@@ -83,8 +83,8 @@ details[open] summary::-webkit-details-marker {
 .button {
   all: unset;
   font-family: "Open Sans", sans-serif;
-  background-color: #363636;
-  color: white;
+  background-color: #e6e6e6;
+  color: #363636;
   cursor: pointer;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -130,7 +130,7 @@ details[open] summary::-webkit-details-marker {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 25px 5px;
+  padding: 25px 30px;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
@@ -190,7 +190,7 @@ details[open] summary::-webkit-details-marker {
 
 .navbar .navbar-item a {
   all: unset;
-  color: #363636;
+  color: #e6e6e6;
 }
 
 .navbar .navbar-item a:hover {
@@ -248,15 +248,18 @@ details[open] summary::-webkit-details-marker {
 }
 
 /* Block */
-#titlehero video {
+#titlehero {
+  color: #e6e6e6;
+}
+
+#titlehero canvas {
+  display: block !important;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 5;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 #titlehero .container {
@@ -276,7 +279,6 @@ details[open] summary::-webkit-details-marker {
   z-index: 10;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.3);
 }
 
 #section1 {
@@ -330,29 +332,35 @@ details[open] summary::-webkit-details-marker {
   text-align: justify;
 }
 
-#section1 .hero-body #professionalExperience {
+#section1 .hero-body #professionalExperience, #section1 .hero-body #education {
   padding-top: 50px;
 }
 
-#section1 .hero-body #professionalExperience hr {
+#section1 .hero-body #professionalExperience hr, #section1 .hero-body #education hr {
   margin-bottom: 1em;
 }
 
-#section1 .hero-body #professionalExperience summary {
-  background: #FFBB43;
+#section1 .hero-body #professionalExperience summary, #section1 .hero-body #education summary {
+  background: #A0785B;
+  color: white;
 }
 
-#section1 .hero-body #professionalExperience summary:hover {
-  background: #FFAF21;
+#section1 .hero-body #professionalExperience summary:hover, #section1 .hero-body #education summary:hover {
+  background: #D1A077;
 }
 
-#section1 .hero-body #professionalExperience details p {
+#section1 .hero-body #professionalExperience details p, #section1 .hero-body #education details p {
   text-align: justify;
 }
 
+#section1 .hero-body #professionalExperience li, #section1 .hero-body #education li {
+  font-size: 1.25em;
+}
+
 #section2 {
-  background-color: #FFBB43;
+  background-color: #A0785B;
   padding: 50px 0;
+  color: white;
 }
 
 #section2 .hero-body {
@@ -397,37 +405,7 @@ details[open] summary::-webkit-details-marker {
   font-weight: 700;
 }
 
-#section3 {
-  background-color: #363636;
-  color: white;
-  padding: 100px 0 50px 0;
-}
-
-#section3 .hero-body {
-  padding: 0 0 100px 0;
-  margin: 0 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#section3 .hero-foot {
+#section2 .hero-foot {
   text-align: center;
-}
-
-#section3 .title, #section3 .subtitle {
-  margin-bottom: 0.3em;
-}
-
-#section3 summary {
-  background: white;
-  color: #363636;
-}
-
-#section3 summary:hover {
-  background: #e6e6e6;
 }
 /*# sourceMappingURL=style.css.map */

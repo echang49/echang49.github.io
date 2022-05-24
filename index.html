@@ -3,10 +3,10 @@
 <head>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> <!--Font Icons-->
     <link rel="stylesheet" href="./style.css">
+    <script src="./granim.min.js"></script>
     <script src="./script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/favicon.png">
-    <script async defer data-website-id="cbe833fb-e950-44be-a08e-94be4bf53db1" src="https://umami.jakobbouchard.dev/umami.js"></script>
 
     <title> Edward Chang </title>
     <meta charset="utf-8">
@@ -20,14 +20,12 @@
 </head>
 <body>
     <div class="hero is-fullheight" id="titlehero">
-        <video loop muted autoplay preload="auto">
-            <source src="video.m4v" type="video/mp4">
-        </video>
+        <canvas id="canvas-image-blending"></canvas>
         <div class="hero-head up-front">
             <nav class="navbar" role="navigation">
                 <div class="navbar-brand">
                     <a class="navbar-item" href="index.html">
-                            <img src="./assets/echang.dev-dark.png" width="148" height="22">
+                            <img src="./assets/echang.dev-light.png" width="148" height="22">
                     </a>
                 </div>
                 <div class="navbar-menu">
@@ -54,7 +52,7 @@
                             </a>
                         </span>
                         <span class="navbar-item">
-                            <a href="https://www.linkedin.com/in/edwardchang2000/">
+                            <a href="https://www.linkedin.com/in/edwchang/">
                                 <span class="icon has-text-dark is-large">
                                     <i class="fab fa-linkedin fa-2x"></i>
                                 </span>
@@ -73,7 +71,7 @@
                 
                 <div class="flex-row">
                     <p class="subtitle">Software Developer</p>
-                    <a class="button is-dark is-rounded ml-20 mt-10" href="./resume">Resume</a>
+                    <a class="button" href="./resume">Resume</a>
                 </div>
             </div>
         </div>
@@ -82,7 +80,7 @@
         <div class="hero-body">
             <div id="aboutMe">
                 <div class="image">
-                    <img src="./assets/pp.webp" height="400px" width="auto" />
+                    <img src="./assets/pp.jpg" height="400px" width="auto" />
                 </div>
                 <div class="description">
                     <p class="title"><strong>About Me</strong></p>
@@ -114,10 +112,23 @@
                     <p>Architecting company technical direction which included developing minimal viable products, designing scalable implementations, and a 1-year company roadmap.</p>
                     <p>Mentored and led company interns by creating a better work environment and speeding up their learning process. Resulted in product MVP delivery 1-month ahead of schedule.</p>
                 </details>
+            </div>
+            <div id="education">
+                <p class="title"><strong>Education</strong></p>
+                <hr />
+                <ul>
+                    <li>Software Engineering @ Western University</li>
+                    <li>Travel and Tourism @ Fanshawe College</li>
+                </ul>
                 <details>
-                    <summary>Daily Dose - Web Developer and Designer</summary>
-                    <p>Built custom web pages which led to a 2x engagement and sales from potential customers.</p>
-                    <p>Helped other employees automate a semi-daily mundane task which resulted in improved task completion efficiency by 80%.</p>
+                    <summary>Notable Courses</summary>
+                    <p>While the bulk of the Software Engineering/Computer Science education between different universities is similar, these are courses I took that may deviate from a common education.</p>
+                    <ul>
+                        <li>ENGSCI3331 - Managing the Innovation Process</li>
+                        <li>COMPSCI4442 - Artificial Intelligence II</li>
+                        <li>SE4455 - Cloud Computing</li>
+                        <li>SE4472 - Information Security</li>
+                    </ul>    
                 </details>
             </div>
         </div>
@@ -187,116 +198,8 @@
                 </details> 
             </div>
         </div>
-    </div>
-    <div class="hero" id="section3">
-        <div class="hero-body">
-            <div id="academicExperience">
-                <p class="title"><strong>Academic Experience</strong></p> 
-                <p class="subtitle">Software Engineering - Western University</p>
-                <details>
-                    <summary>Year One</summary>
-                    <ul>
-                        <li>APPLMATH1411 - Linear Algebra Numerical Analysis for Engineers</li>
-                        <li>APPLMATH1413 - Applied Math for Engineers I</li>
-                        <li>BUSINESS1299 - Business for Engineers</li>
-                        <li>CHEM1302 - Discovering Chemical Energetics</li>
-                        <li>ENGSCI1021 - Properties of Materials</li>
-                        <li>ENGSCI1022 - Engineering Statics</li>
-                        <li>ENGSCI1036 - Programming Fundamentals for Engineers</li>
-                        <li>ENGSCI1050 - Foundations for Engineering Practice</li>
-                        <li>PHYSICS1401 - Physics for Engineering Students I</li>
-                        <li>PHYSICS1402 - Physics for Engineering Students II</li>
-                    </ul>
-                </details>
-                <details>
-                    <summary>Year Two</summary>
-                    <ul>
-                        <li>APPLMATH2270 - Applied Math for Engineers II</li>
-                        <li>APPLMATH2276 - Applied Math for Electrical and Mechanical Engineers III</li>
-                        <li>ECE2238 - Introduction to Electrical Engineering</li>
-                        <li>ECE2277 - Digital Logic Systems</li>
-                        <li>ENGSCI3330 - New Venture Creation</li>
-                        <li>MATH2151 - Discrete Structures for Engineers</li>
-                        <li>SE2202 - Scripting Programming Language</li>
-                        <li>SE2203 - Software Design</li>
-                        <li>SE2205 - Algorithms and Data Structures</li>
-                        <li>SE2250 - Software Construction</li>
-                        <li>STATS2141 - Applied Probability and Statistics for Engineers</li>
-                        <li>WRITING2130 - Better Communication Bridges</li>
-                    </ul>
-                </details>
-                <details>
-                    <summary>Year Three</summary>
-                    <ul>
-                        <li>ECE3375 - Microprocessors and Microcomputers</li>
-                        <li>ECE4436 - Networking</li>
-                        <li>ENGSCI3331 - Managing the Innovation Process</li>
-                        <li>SE3309 - Database Management Systems</li>
-                        <li>SE3310 - Theoretical Foundations for Software Engineering</li>
-                        <li>SE3313 - Operating Systems for Software Engineering</li>
-                        <li>SE3314 - Computer Network Applications</li>
-                        <li>SE3316 - Web Technologies</li>
-                        <li>SE3350 - Software Engineering Design I</li>
-                        <li>SE3351 - Software Project & Project Management</li>
-                        <li>SE3352 - Software Requirements and Analysis</li>
-                        <li>SE3353 - Human Computer Interface Design</li>
-                    </ul>
-                </details>
-                <details>
-                    <summary>Year Four</summary>
-                    <ul>
-                        <li>COMPSCI4442 - Artificial Intelligence II</li>
-                        <li>ENGSCI3351 - Engineering Internship</li>
-                        <li>ENGSCI3352 - Engineering Co-op</li>
-                        <li>ENGSCI4498 - Engineering Ethics, Sustainable Development and the Law</li>
-                        <li>SE4455 - Cloud Computing</li>
-                        <li>SE4472 - Information Security</li>
-                    </ul>
-                </details>
-                <p class="subtitle">Fanshawe College - Travel and Tourism</p>
-                <details>
-                    <summary>Year One</summary>
-                    <ul>
-                        <li>BUSI1169 - Travel Business Operations</li>
-                        <li>COMM1129 - Workplace Writing Skills</li>
-                        <li>COMP1512 - Travel Systems & Software</li>
-                        <li>DEVL1046 - Career Strategies</li>
-                        <li>MMED1065 - Emerging Technology Trends</li>
-                        <li>TOUR1009 - Sales & Customer Service</li>
-                        <li>TRAV1027 - Destination Geography</li>
-                        <li>TRAV1028 - Attractions & Tourism</li>
-                        <li>TRAV1029 - The Tour Industry</li>
-                        <li>TRAV1030 - Transportation & Hospitality</li>
-                        <li>TRAV1033 - Fundamentals of Travel</li>
-                        <li>TRAV3015 - Flights & Fares</li>
-                    </ul>
-                </details>
-                <details>
-                    <summary>Year Two</summary>
-                    <ul>
-                        <li>ANTH1012 - Cultural Anthropology</li>
-                        <li>BEVR1004 - Wines of the World</li>
-                        <li>COOP1020 - Co-op Education Employment Prep</li>
-                        <li>GEOG1006 - Discover North America</li>
-                        <li>GEOG3002 - World Destinations 1</li>
-                        <li>FINA3046 - Finance & Business Operations</li>
-                        <li>MKTG1059 - Marketing for Tourism & Hospitality</li>
-                        <li>POLI1018 - Pirates, Smuggling & Undergrnd Economies</li>
-                        <li>TOUR1011 - Tourism Certifications</li>
-                        <li>TOUR3001 - Group Tour Management</li>
-                        <li>TRAV1013 - Industry Insight</li>
-                        <li>TRAV1017 - International Field Study</li>
-                        <li>TRAV1035 - Front Office Applications</li>
-                        <li>TRAV3011 - Exploring Retail Travel</li>
-                        <li>TRAV3012 - Global Distribution</li>
-                        <li>TRAV3014 - Flights & Fares 2</li>
-                        <li>WRIT1030 - Reason & Writing 1</li>
-                    </ul>
-                </details>
-            </div>
-        </div>
         <div class="hero-foot">
-            <p>Version 3.8</p>
+            <p>Version 4.0</p>
         </div>
     </div>
 </body>

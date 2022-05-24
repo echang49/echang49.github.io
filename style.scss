@@ -74,8 +74,8 @@ details[open] summary::-webkit-details-marker {
 .button {
     all: unset;
     font-family: $font-primary;
-    background-color: $dark;
-    color: $white;
+    background-color: $light;
+    color: $dark;
     cursor: pointer;
     justify-content: center;
     padding-bottom: calc(0.5em - 1px);
@@ -105,7 +105,7 @@ details[open] summary::-webkit-details-marker {
     @media screen and (max-width: 900px){
         justify-content: space-between;
     }
-    padding: 25px 5px;
+    padding: 25px 30px;
     flex-wrap: nowrap;
     .navbar-brand{
         order: 0;
@@ -131,7 +131,7 @@ details[open] summary::-webkit-details-marker {
         margin: auto 10px;
         a {
             all: unset;
-            color: $dark;
+            color: $light;
             &:hover {
                 cursor: pointer;
             }
@@ -142,7 +142,6 @@ details[open] summary::-webkit-details-marker {
                 all: unset;
             }
         }
-        
     }
 }
 
@@ -170,14 +169,15 @@ details[open] summary::-webkit-details-marker {
 
 /* Block */
 #titlehero {
-    video{
-        width:100%;
-        height:100%;
+    color: $light;
+    canvas {
+        display: block!important;
+        width: 100%;
+        height: 100%;
         position:absolute;
         top:0;
         left:0;
         z-index:5;
-        object-fit: cover;
     }
     .container {
         margin: auto 15vw;
@@ -194,7 +194,6 @@ details[open] summary::-webkit-details-marker {
 	    z-index: 10;
 	    top:0;
 	    left:0;
-	    background:rgba(255,255,255,0.3);
     }
 }
 
@@ -224,27 +223,33 @@ details[open] summary::-webkit-details-marker {
                 }
             }
         }
-        #professionalExperience {
+        #professionalExperience, #education {
             padding-top: 50px;
             hr {
                 margin-bottom: 1em;
             }
             summary {
-                background: #FFBB43;
+                background: #A0785B;
+                color: $white;
                 &:hover{
-                    background: #FFAF21;
+                    background: #D1A077;
                 }
             }
             details p {
                 text-align: justify;
+            }
+
+            li {
+                font-size: 1.25em;
             }
         }
     }
 }
 
 #section2{
-    background-color: #FFBB43;
+    background-color: #A0785B;
     padding: 50px 0;
+    color: $white;
     .hero-body{
         display: flex;
         flex-direction: column;
@@ -273,30 +278,8 @@ details[open] summary::-webkit-details-marker {
         text-align: justify;
         font-weight: 700;
     }
-}
 
-#section3{
-    background-color: $dark;
-    color: $white;
-    padding: 100px 0 50px 0;
-   .hero-body {
-        padding: 0 0 100px 0;
-        margin: 0 50px;
-        display: flex;
-        justify-content: center;
-   }
-   .hero-foot {
-       text-align: center;
-   }
-   .title, .subtitle {
-        margin-bottom: 0.3em;
+    .hero-foot {
+        text-align: center;
     }
-    summary {
-        background: $white;
-        color: $dark;
-        &:hover{
-            background: $light;
-        }
-    }
-   
 }

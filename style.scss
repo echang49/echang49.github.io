@@ -1,7 +1,8 @@
 $dark: hsl(0, 0%, 21%);
 $light: hsl(0, 0%, 90%);
 $white: hsl(0, 0%, 100%);
-$font-primary: 'Open Sans', sans-serif;;
+$font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-secondary: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 /* Composition */
 body {
@@ -11,6 +12,7 @@ body {
 }
 
 summary {
+    font-family: $font-secondary;
     padding: 1em;
     background: $white;
     margin-bottom: 1em;
@@ -58,11 +60,13 @@ details[open] summary::-webkit-details-marker {
 }
 
 .title {
+    font-family: $font-secondary;
     font-size: 3rem !important;
     margin: 0 0;
 }
 
 .subtitle {
+    font-family: $font-secondary;
     font-size: 2rem !important;
     margin: 0 0;
 }
@@ -262,7 +266,6 @@ details[open] summary::-webkit-details-marker {
     }
     details p{
         text-align: justify;
-        font-weight: 700;
     }
 
     .hero-foot {

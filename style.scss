@@ -51,7 +51,9 @@ details[open] summary::-webkit-details-marker {
     }
 }
 
-
+li {
+    padding: 1px 0;
+}
 
 /* Utility */
 
@@ -153,6 +155,38 @@ details[open] summary::-webkit-details-marker {
     }
 }
 
+.card {
+    margin: 20px 0;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 5px $light;
+    .card-image {
+        margin-right: 30px;
+    }
+    .card-body {
+        flex-grow: 1;
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3, h4 {
+                margin: 5px 0;
+            }
+            p {
+                text-align: right;
+                margin: 2px 0;
+                font-weight: 500;
+            }
+        }
+        ul {
+            padding-left: 20px;
+        }
+    }
+}
+
 .mr-5 {
     margin-right: 5px;
 }
@@ -175,6 +209,9 @@ details[open] summary::-webkit-details-marker {
     .up-front{
         position: relative;
         z-index: 20;
+        h1 {
+            margin: 15px 0;
+        }
     }
     &:after {
         width:100%;
@@ -207,13 +244,36 @@ details[open] summary::-webkit-details-marker {
             .description{
                 order: 1;
                 max-width: 60ch;
-                p{
-                    font-size: 1.3rem;
+                .info {
+                    font-size: 1.2rem;
                     text-align: justify;
+                    strong {
+                        font-size: 1.25rem;
+                    }
+                }
+                ul {
+                    columns: 3;
+                    -webkit-columns: 3;
+                    -moz-columns: 3;
+                    padding-left: 20px;
                 }
             }
         }
-        #professionalExperience, #education {
+        #professionalExperience {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            hr {
+                margin: 0 0 1em 0;
+            }
+            .card:first-of-type {
+                margin-top: 0;
+            }
+            .card:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        #education {
             padding-top: 50px;
             hr {
                 margin-bottom: 1em;
@@ -227,10 +287,6 @@ details[open] summary::-webkit-details-marker {
             }
             details p {
                 text-align: justify;
-            }
-
-            li {
-                font-size: 1.25em;
             }
         }
     }

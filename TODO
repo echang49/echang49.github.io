@@ -1,8 +1,6 @@
 Changes for V4:
-    Download globe signal for domain that's not Github
+    REFACTOR AND PURGE HTML, SCSS, AND JS***********
     Move from granim.js to grimage.js
     Add animations with anime.js
-    Redesign portfolio & Projects
     Make mobile responsive 
-    Change logo & favicon
-    (If using tailwind or something else, delete unused css and js)
+    Add animations onto the terminal to be similar to that of a terminal

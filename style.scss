@@ -1,8 +1,14 @@
 $dark: hsl(0, 0%, 21%);
 $light: hsl(0, 0%, 90%);
 $white: hsl(0, 0%, 100%);
+$sand: #A0785B;
+$terminal-primary: #815E94;
+$terminal-secondary: #D53282;
+$terminal-tertiary: $dark;
+
 $font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $font-secondary: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$font-terminal: 'Courier New', Courier, monospace;
 
 /* Composition */
 body {
@@ -279,7 +285,7 @@ li {
                 margin-bottom: 1em;
             }
             summary {
-                background: #A0785B;
+                background: $sand;
                 color: $white;
                 &:hover{
                     background: #D1A077;
@@ -293,7 +299,7 @@ li {
 }
 
 #section2{
-    background-color: #A0785B;
+    background-color: $sand;
     padding: 50px 0;
     color: $white;
     .hero-body{
@@ -304,26 +310,29 @@ li {
    .title{
         margin-bottom: 0.5em;
     }
-
-    summary{
-        color: $dark;
-        span {
-            float: right;
+    .terminal {
+        display: flex;
+        flex-direction: column;
+        background-color: #FDF6E2;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: $font-terminal;
+        color: $terminal-primary;
+        text-align: justify;
+        .terminal-secondary {
+            color: $terminal-secondary;
+        }
+        .terminal-tertiary {
+            color: $terminal-tertiary;
             margin-right: 10px;
-            transform: translateY(-5px);
-            a {
-                text-decoration: none;
-                color: $dark!important;
-                &:hover {
-                    color: black!important;
-                }
-            }
+        }
+        .terminal-header {
+            font-weight: 600;
+        }
+        ul {
+            padding-left: 20px;
         }
     }
-    details p{
-        text-align: justify;
-    }
-
     .hero-foot {
         text-align: center;
     }

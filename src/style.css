@@ -34,12 +34,16 @@ details[open] summary {
 }
 
 details[open] summary ~ * {
-  -webkit-animation: sweep .5s ease-in-out;
-          animation: sweep .5s ease-in-out;
+  -webkit-animation: sweep .75s ease-in-out;
+          animation: sweep .75s ease-in-out;
 }
 
 li {
   padding: 1px 0;
+}
+
+a {
+  word-wrap: break-word;
 }
 
 @-webkit-keyframes sweep {
@@ -101,6 +105,74 @@ li {
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navbar-brand .navbar-hamburger {
+  height: 23px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .navbar-brand .navbar-hamburger .line {
+  height: 2px;
+  width: 100%;
+  border-radius: 10px;
+  background: #e6e6e6;
+}
+
+.navbar .navbar-brand .navbar-hamburger .line:nth-child(1) {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.navbar .navbar-brand .navbar-hamburger .line:nth-child(2) {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.navbar .navbar-brand .navbar-hamburger .line:nth-child(3) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.navbar .navbar-brand .navbar-hamburger[open] .line:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.navbar .navbar-brand .navbar-hamburger[open] .line:nth-child(2) {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.navbar .navbar-brand .navbar-hamburger[open] .line:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .navbar .navbar-menu {
@@ -125,6 +197,44 @@ li {
 
 .navbar .navbar-item a:hover {
   cursor: pointer;
+}
+
+@media screen and (min-width: 721px) {
+  .navbar .navbar-brand .navbar-hamburger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar .navbar-brand {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar .navbar-menu {
+    display: none;
+  }
+  .navbar .navbar-menu[open] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-animation: sweep .75s ease-in-out;
+            animation: sweep .75s ease-in-out;
+  }
+  .navbar .navbar-menu[open] .navbar-item {
+    padding-top: 10px;
+  }
 }
 
 .hero {
@@ -160,7 +270,7 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 48px 24px;
+  padding: 7vh 3vw;
 }
 
 .hero .hero-foot {
@@ -219,6 +329,28 @@ li {
   padding-left: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card .card-image {
+    margin: 0 0 10px 0;
+  }
+}
+
+.main-width {
+  width: 900px;
+}
+
+@media screen and (max-width: 950px) {
+  .main-width {
+    width: 100%;
+  }
+}
+
 /* Block */
 #titlehero {
   color: #e6e6e6;
@@ -233,13 +365,15 @@ li {
   margin: auto 15vw;
 }
 
+@media screen and (max-width: 480px) {
+  #titlehero .hero-body h1, #titlehero .hero-body p {
+    text-align: center;
+  }
+}
+
 #titlehero .up-front {
   position: relative;
   z-index: 20;
-}
-
-#section1 {
-  padding: 3vh 0;
 }
 
 #section1 #aboutMe {
@@ -249,7 +383,15 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 900px;
+}
+
+@media screen and (max-width: 720px) {
+  #section1 #aboutMe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #section1 #aboutMe .image {
@@ -257,6 +399,15 @@ li {
       -ms-flex-order: 0;
           order: 0;
   margin-right: 50px;
+}
+
+@media screen and (max-width: 720px) {
+  #section1 #aboutMe .image {
+    margin: 0 0 5vh 0;
+  }
+  #section1 #aboutMe .image img {
+    height: 30vh;
+  }
 }
 
 #section1 #aboutMe .image img {
@@ -285,6 +436,14 @@ li {
   padding-left: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  #section1 #aboutMe .description ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+}
+
 #section1 #work {
   margin-top: 10px;
   display: -webkit-box;
@@ -294,7 +453,6 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 900px;
 }
 
 #section1 #work hr {
@@ -311,7 +469,6 @@ li {
 
 #section1 #education {
   padding-top: 50px;
-  width: 900px;
 }
 
 #section1 #education hr {
@@ -324,12 +481,10 @@ li {
 
 #section2 {
   background-color: #A0785B;
-  padding: 50px 0;
   color: white;
 }
 
 #section2 .terminal {
-  width: 900px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -35,3 +35,11 @@ function declareGarmin() {
     },
   });
 }
+
+let state = false;
+function toggleNavbar() {
+  let burger = document.getElementsByClassName("navbar-hamburger")[0];
+  let menu = document.getElementsByClassName("navbar-menu")[0];
+  burger.toggleAttribute("open");
+  menu.toggleAttribute("open");
+}

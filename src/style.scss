@@ -14,7 +14,9 @@ $font-terminal: 'Courier New', Courier, monospace;
 $small-radius: 5px;
 $large-radius: 25px;
 
-$main-width: 900px;
+$large-breakpoint: 950px;
+$medium-breakpoint: 720px;
+$small-breakpoint: 480px;
 
 /* Composition */
 body {
@@ -48,13 +50,17 @@ details {
     &[open] summary {
         list-style-image: url("./assets/chevron-up.svg");
         ~ * {
-            animation: sweep .5s ease-in-out;
+            animation: sweep .75s ease-in-out;
         }
     }
 }
 
 li {
     padding: 1px 0;
+}
+
+a {
+    word-wrap:break-word;
 }
 
 @keyframes sweep {
@@ -96,6 +102,43 @@ li {
     padding: 25px 30px;
     .navbar-brand{
         order: 0;
+        display: flex;
+        align-items: center;
+        .navbar-hamburger {
+            height: 23px;
+            width: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .line {
+                height: 2px;
+                width: 100%;
+                border-radius: 10px;
+                background: $light;
+                &:nth-child(1) {
+                    transform-origin: 0% 0%;
+                    transition: transform 0.4s ease-in-out;
+                }
+                &:nth-child(2) {
+                    transition: transform 0.2s ease-in-out;
+                }
+                &:nth-child(3) {
+                    transform-origin: 0% 100%;
+                    transition: transform 0.4s ease-in-out;
+                }
+            }
+            &[open] .line {
+                &:nth-child(1) {
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    transform: scaleY(0);
+                }
+                &:nth-child(3) {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
     }
     .navbar-menu{
         order: 1;
@@ -108,6 +151,30 @@ li {
             all: unset;
             &:hover {
                 cursor: pointer;
+            }
+        }
+    }
+    @media screen and (min-width: $medium-breakpoint + 1px){
+        .navbar-brand .navbar-hamburger{
+            display: none;
+        }
+    }
+    @media screen and (max-width: $medium-breakpoint){
+        flex-direction: column;
+        .navbar-brand {
+            justify-content: space-between;
+        }
+        .navbar-menu {
+            display: none;
+            
+            &[open] {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                animation: sweep .75s ease-in-out;
+                .navbar-item {
+                    padding-top: 10px;
+                }
             }
         }
     }
@@ -125,7 +192,7 @@ li {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 48px 24px;
+        padding: 7vh 3vw;
     }
     .hero-foot{
         order: 2;
@@ -161,6 +228,19 @@ li {
             padding-left: 20px;
         }
     }
+    @media screen and (max-width: $small-breakpoint) {
+        flex-direction: column;
+        .card-image {
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+.main-width {
+    width: 900px;
+    @media screen and (max-width: $large-breakpoint) {
+        width: 100%;
+    }  
 }
 
 /* Block */
@@ -170,6 +250,11 @@ li {
     .hero-body {
         flex-direction: row;
         margin: auto 15vw;
+        @media screen and (max-width: $small-breakpoint) {
+            h1, p {
+                text-align: center;
+            }
+        }
     }
     .up-front{
         position: relative;
@@ -178,14 +263,21 @@ li {
 }
 
 #section1 {
-    padding: 3vh 0;
     #aboutMe {
         display: flex;
         align-items: center;
-        width: $main-width;
+        @media screen and (max-width: $medium-breakpoint) {
+            flex-direction: column;
+        }
         .image{
             order: 0;
             margin-right: 50px;
+            @media screen and (max-width: $medium-breakpoint) {
+                margin: 0 0 5vh 0;
+                img {
+                    height: 30vh;
+                }
+            }
             img {
                 border: 2px solid $dark;
             }
@@ -204,6 +296,11 @@ li {
                 -webkit-columns: 3;
                 -moz-columns: 3;
                 padding-left: 20px;
+                @media screen and (max-width: $small-breakpoint) {
+                    columns: 2;
+                    -webkit-columns: 2;
+                    -moz-columns: 2;
+                }
             }
         }
     }
@@ -211,7 +308,6 @@ li {
         margin-top: 10px;
         display: flex;
         flex-direction: column;
-        width: $main-width;
         hr {
             margin: 0 0 1em 0;
         }
@@ -224,7 +320,6 @@ li {
     }
     #education {
         padding-top: 50px;
-        width: $main-width;
         hr {
             margin-bottom: 1em;
         }
@@ -236,11 +331,8 @@ li {
 
 #section2{
     background-color: $sand;
-    padding: 50px 0;
     color: $white;
-
     .terminal {
-        width: $main-width;
         display: flex;
         flex-direction: column;
         background-color: #FDF6E2;

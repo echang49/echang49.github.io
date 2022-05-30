@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="./src/style.css">
     <script src="./src/granim.min.js"></script>
     <script src="./src/script.js"></script>
-    <link rel="icon" href="../assets/favicon.png">
+    <link rel="icon" href="./assets/favicon.png">
     <title> Edward Chang </title>
     
     <meta charset="UTF-8">
@@ -25,6 +25,11 @@
                     <a class="navbar-item" href="index.html">
                             <img src="./assets/echang.dev-light.png" width="148" height="22">
                     </a>
+                    <div class="navbar-hamburger" onclick="toggleNavbar()">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
                 </div>
                 <div class="navbar-menu">
                     <span class="navbar-item">
@@ -59,7 +64,7 @@
     </div>
     <div class="hero" id="section1">
         <div class="hero-body">
-            <div id="aboutMe">
+            <div class="main-width" id="aboutMe">
                 <div class="image">
                     <img src="./assets/pp.jpg" height="400px" width="auto" />
                 </div>
@@ -82,7 +87,7 @@
                     </ul>
                 </div>
             </div>
-            <div id="work">
+            <div class="main-width" id="work">
                 <h2 class="title">Work</h2>
                 <p>Are you a recruiter and am impressed by what you see? Your company could be at the top of this list! &#127881;</p>
                 <hr />
@@ -132,7 +137,7 @@
                     </div>
                 </div>
             </div>
-            <div id="education">
+            <div class="main-width" id="education">
                 <h2 class="title">Education</h2>
                 <hr />
                 <ul>
@@ -153,10 +158,9 @@
         </div>
     </div>
     <div class="hero" id="section2">
-        <div class="hero-body">
-            <div id="portfolio">
+        <div class="hero-body" id="portfolio">
+            <div class="main-width">
                 <!--SVG taken from carbon.now.sh-->
-
                 <h2 class="title">Projects</h2>
                 <br />
                 <div class="terminal">
@@ -198,7 +202,7 @@
             </div>
         </div>
         <div class="hero-foot">
-            <p>Version 4.5</p>
+            <p>Version 4.6</p>
         </div>
     </div>
 </body>

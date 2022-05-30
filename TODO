@@ -1,5 +1,4 @@
 Changes for V4:
     Move from granim.js to grimage.js
     Add animations with anime.js
-    Make mobile responsive 
     Add animations onto the terminal to be similar to that of a terminal

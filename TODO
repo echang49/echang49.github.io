@@ -1,5 +1,4 @@
 Changes for V4:
-    REFACTOR AND PURGE HTML, SCSS, AND JS***********
     Move from granim.js to grimage.js
     Add animations with anime.js
     Make mobile responsive 

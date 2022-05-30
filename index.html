@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-UK" prefix="og: http://ogp.me/ns#">
 <head>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./granim.min.js"></script>
-    <script src="./script.js"></script>
-    <link rel="icon" href="./assets/favicon.png">
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="./src/granim.min.js"></script>
+    <script src="./src/script.js"></script>
+    <link rel="icon" href="../assets/favicon.png">
     <title> Edward Chang </title>
     
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
     <meta name="author" content="Edward Chang" />
 </head>
 <body>
-    <div class="hero is-fullheight" id="titlehero">
+    <div class="hero" id="titlehero">
         <canvas id="canvas-image-blending"></canvas>
         <div class="hero-head up-front">
             <nav class="navbar" role="navigation">
@@ -31,7 +31,7 @@
                         <a href="#aboutMe"><strong>About Me</strong></a> 
                     </span>
                     <span class="navbar-item">
-                        <a href="#professionalExperience"><strong>Experience</strong></a> 
+                        <a href="#work"><strong>Experience</strong></a> 
                     </span>
                     <span class="navbar-item">
                         <a href="#portfolio"><strong>Projects</strong></a>
@@ -50,15 +50,10 @@
             </nav>
         </div>
         <div class="hero-body up-front">
-            <div class="container">
-                <h1 class="title">EDWARD CHANG | 
-                    <span class="txt-type" data-wait="1000" data-words='["Web Development","Salesforce","Enterprise"]'></span>
-                </h1>
-                
-                <div class="flex-row">
-                    <p class="subtitle">Software Developer</p>
-                    <a class="button" href="./resume">Resume</a>
-                </div>
+            <div>
+                <h1 class="title">EDWARD CHANG</h1>
+                <p class="subtitle">Software Developer</p>
+                <p><a class="button" href="./resume">Resume</a></p>
             </div>
         </div>
     </div>
@@ -75,7 +70,7 @@
                     <p class="info">Outside of work and personal projects, I have two cats. Just like a parent, I'll show pictures of them to anyone who's willing.</p>
 
                     <h3 class="subtitle">Currently Tinkering With:</h3>
-                    <ul id="skills">
+                    <ul>
                         <li>TypeScript</li>
                         <li>React</li>
                         <li>Node.js</li>
@@ -87,7 +82,7 @@
                     </ul>
                 </div>
             </div>
-            <div id="professionalExperience">
+            <div id="work">
                 <h2 class="title">Work</h2>
                 <p>Are you a recruiter and am impressed by what you see? Your company could be at the top of this list! &#127881;</p>
                 <hr />
@@ -203,7 +198,7 @@
             </div>
         </div>
         <div class="hero-foot">
-            <p>Version 4.4</p>
+            <p>Version 4.5</p>
         </div>
     </div>
 </body>

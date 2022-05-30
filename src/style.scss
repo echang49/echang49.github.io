@@ -42,13 +42,13 @@ details {
         outline: none;
         border-radius: $small-radius;
         transition: background-color .75s;
-        list-style-image: url("./assets/chevron-down.svg");
+        list-style-image: url("../assets/chevron-down.svg");
         &:hover{
             background: $light-sand;
         }
     }
     &[open] summary {
-        list-style-image: url("./assets/chevron-up.svg");
+        list-style-image: url("../assets/chevron-up.svg");
         ~ * {
             animation: sweep .75s ease-in-out;
         }
@@ -70,6 +70,16 @@ a {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes reverse-sweep {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: var(--details-translate, translateY(-0.5em));
     }
 }
 
@@ -163,15 +173,17 @@ a {
         flex-direction: column;
         .navbar-brand {
             justify-content: space-between;
+            .navbar-item {
+                margin: 0;
+            }
         }
         .navbar-menu {
             display: none;
-            
             &[open] {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                animation: sweep .75s ease-in-out;
+                animation: sweep .75s ease-in-out;  
                 .navbar-item {
                     padding-top: 10px;
                 }
@@ -233,6 +245,13 @@ a {
         .card-image {
             margin: 0 0 10px 0;
         }
+        .card-header {
+            flex-direction: column;
+            text-align: center;
+        }
+        li {
+            text-align: justify;
+        }
     }
 }
 
@@ -254,6 +273,14 @@ a {
             h1, p {
                 text-align: center;
             }
+            .title, .subtitle {
+                margin: 2vh 0;
+            }
+            margin: 0;
+            position: absolute!important;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
         }
     }
     .up-front{

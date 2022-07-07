@@ -6,13 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- https://realfavicongenerator.net/favicon_result?file_id=p1g7cegn6f18j1g4v1r4pl7813hb6 -->
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ddb439">
-		<meta name="msapplication-TileColor" content="#ddb439">
-		<meta name="theme-color" content="#ddb439">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ddb439" />
+		<meta name="msapplication-TileColor" content="#ddb439" />
+		<meta name="theme-color" content="#ddb439" />
 
 		<!-- Primary Meta Tags -->
 		<title>Edward Chang</title>
@@ -43,7 +43,11 @@
 				<nav class="navbar" role="navigation">
 					<div class="navbar-brand">
 						<a class="navbar-item" href="index.html">
-							<img src="./assets/echang.dev-light.png" width="148" height="22" />
+							<picture>
+								<source srcset="./assets/echang.dev-light.webp" type="image/webp" />
+								<source srcset="./assets/echang.dev-light.png" type="image/png" />
+								<img src="./assets/echang.dev-light.png" width="148" height="22" />
+							</picture>
 						</a>
 						<div class="navbar-hamburger">
 							<span class="line"></span>
@@ -63,12 +67,46 @@
 						</span>
 						<span class="navbar-item">
 							<a href="https://github.com/echang49">
-								<img src="./assets/github-light.png" width="32" height="32" />
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									aria-label="GitHub"
+									role="img"
+									width="32px"
+									height="32px"
+									viewBox="0 0 512 512"
+								>
+									<rect width="512" height="512" rx="15%" fill="#fff" mask="url(#octocat)" />
+									<mask id="octocat">
+										<rect width="512" height="512" fill="#fff" />
+										<path
+											fill="#000"
+											d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-44c-71 16-86-34-86-34-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"
+										/>
+									</mask>
+								</svg>
 							</a>
 						</span>
 						<span class="navbar-item">
 							<a href="https://www.linkedin.com/in/edwchang/">
-								<img src="./assets/linkedin-light.png" width="32" height="32" />
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									aria-label="LinkedIn"
+									role="img"
+									width="32px"
+									height="32px"
+									viewBox="0 0 512 512"
+								>
+									<rect width="512" height="512" rx="15%" fill="#fff" mask="url(#linkedin-in)" />
+									<mask id="linkedin-in">
+										<rect width="512" height="512" fill="#fff" />
+										<circle fill="#000" cx="142" cy="138" r="37" />
+										<path stroke="#000" stroke-width="66" d="M244 194v198M142 194v198" />
+										<path
+											fill="#000"
+											d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"
+										/>
+									</mask>
+								</svg>
 							</a>
 						</span>
 					</div>
@@ -86,7 +124,11 @@
 			<div class="hero-body">
 				<div class="main-width" id="aboutMe">
 					<div class="image">
-						<img src="./assets/pp.jpg" height="400px" width="auto" />
+						<picture>
+							<source srcset="./assets/pp.webp" type="image/webp" />
+							<source srcset="./assets/pp.jpg" type="image/jpeg" />
+							<img src="./assets/pp.jpg" height="400px" width="auto" />
+						</picture>
 					</div>
 					<div class="description">
 						<h2 class="title">About Me</h2>
@@ -124,7 +166,11 @@
 					<hr />
 					<div class="card">
 						<div class="card-image">
-							<img src="./assets/square-enix.jpg" height="auto" width="80px" />
+							<picture>
+								<source srcset="./assets/square-enix.webp" type="image/webp" />
+								<source src="./assets/square-enix.jpg" type="image/jpeg" />
+								<img src="./assets/square-enix.jpg" height="auto" width="80px" />
+							</picture>
 						</div>
 						<div class="card-body">
 							<div class="card-header">
@@ -149,7 +195,11 @@
 					</div>
 					<div class="card">
 						<div class="card-image">
-							<img src="./assets/traction-on-demand.jpg" height="auto" width="80px" />
+							<picture>
+								<source srcset="./assets/traction-on-demand.webp" type="image/webp" />
+								<source srcset="./assets/traction-on-demand.jpg" type="image/jpeg" />
+								<img src="./assets/traction-on-demand.jpg" height="auto" width="80px" />
+							</picture>
 						</div>
 						<div class="card-body">
 							<div class="card-header">

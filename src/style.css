@@ -380,5 +380,11 @@ a {
 #section2 .hero-foot {
   text-align: center;
 }
+#section2 .hero-foot a {
+  color: #fff;
+}
+#section2 .hero-foot a:hover {
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=style.css.map */

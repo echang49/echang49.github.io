@@ -392,5 +392,11 @@ a {
 	}
 	.hero-foot {
 		text-align: center;
+		a {
+			color: #fff;
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 }

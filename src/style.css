@@ -44,6 +44,9 @@ li {
 a {
   word-wrap: break-word;
 }
+a:hover {
+  text-decoration: none;
+}
 
 @keyframes sweep {
   from {
@@ -84,6 +87,10 @@ a {
   cursor: pointer;
   text-align: center;
   border-radius: 25px;
+  transition: opacity 0.2s ease;
+}
+.button:hover {
+  opacity: 0.5;
 }
 
 .navbar {
@@ -95,6 +102,12 @@ a {
   order: 0;
   display: flex;
   align-items: center;
+}
+.navbar .navbar-brand .navbar-item {
+  transition: opacity 0.2s ease;
+}
+.navbar .navbar-brand .navbar-item:hover {
+  opacity: 0.5;
 }
 .navbar .navbar-brand .navbar-hamburger {
   height: 23px;
@@ -139,9 +152,11 @@ a {
 }
 .navbar .navbar-item a {
   all: unset;
+  transition: opacity 0.2s ease;
 }
 .navbar .navbar-item a:hover {
   cursor: pointer;
+  opacity: 0.5;
 }
 @media screen and (min-width: 721px) {
   .navbar .navbar-brand .navbar-hamburger {
@@ -382,9 +397,6 @@ a {
 }
 #section2 .hero-foot a {
   color: #fff;
-}
-#section2 .hero-foot a:hover {
-  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

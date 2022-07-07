@@ -38,8 +38,15 @@ function init() {
 	burger.addEventListener("click", toggleNavbar);
 
 	function toggleNavbar() {
-		burger.toggleAttribute("open");
-		menu.toggleAttribute("open");
+		if (burger.hasAttribute("open")) {
+			burger.setAttribute("aria-expanded", false);
+			burger.removeAttribute("open");
+			menu.removeAttribute("open");
+		} else {
+			burger.setAttribute("aria-expanded", true);
+			burger.setAttribute("open", "");
+			menu.setAttribute("open", "");
+		}
 	}
 
 	function supportsWebp() {

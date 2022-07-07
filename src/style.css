@@ -1,3 +1,20 @@
+@charset "UTF-8";
+/* Accessibility stuff */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+:focus {
+  outline-width: 2px !important;
+  outline-style: dashed !important;
+  outline-offset: 0.25rem !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -17,24 +34,47 @@ canvas {
 }
 
 details summary {
+  position: relative;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  padding: 1em;
+  padding: 1em 1em 1em 2em;
   background: #a0785b;
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
-  outline: none;
   border-radius: 5px;
   transition: background-color 0.75s;
-  list-style-image: url("../assets/chevron-down.svg");
+  list-style-type: none;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary::before {
+  content: "›";
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  transform: rotate(0);
+  transform-origin: 0.35rem 2px;
+  transition: 0.25s transform ease;
+  font-size: 2.25rem;
+  line-height: 0;
 }
 details summary:hover {
   background: #d1a077;
 }
-details[open] summary {
-  list-style-image: url("../assets/chevron-up.svg");
+details summary:focus {
+  outline-color: #a0785b;
+}
+details summary ~ * {
+  opacity: 0;
+  transform: var(--details-translate, translateY(-0.5em));
+  transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
+}
+details[open] summary::before {
+  transform: rotate(90deg);
 }
 details[open] summary ~ * {
-  animation: sweep 0.75s ease-in-out;
+  opacity: 1;
+  transform: none;
 }
 
 li {
@@ -48,24 +88,6 @@ a:hover {
   text-decoration: none;
 }
 
-@keyframes sweep {
-  from {
-    opacity: 0;
-    transform: var(--details-translate, translateY(-0.5em));
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes reverse-sweep {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: var(--details-translate, translateY(-0.5em));
-  }
-}
 /* Utility */
 .title {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -88,6 +110,7 @@ a:hover {
   text-align: center;
   border-radius: 25px;
   transition: opacity 0.2s ease;
+  outline-color: #fff !important;
 }
 .button:hover {
   opacity: 0.5;
@@ -105,16 +128,19 @@ a:hover {
 }
 .navbar .navbar-brand .navbar-item {
   transition: opacity 0.2s ease;
+  outline-color: #fff !important;
 }
 .navbar .navbar-brand .navbar-item:hover {
   opacity: 0.5;
 }
 .navbar .navbar-brand .navbar-hamburger {
+  all: unset;
   height: 23px;
   width: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 }
 .navbar .navbar-brand .navbar-hamburger .line {
   height: 2px;
@@ -146,6 +172,9 @@ a:hover {
   order: 1;
   display: flex;
   align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .navbar .navbar-item {
   margin: auto 15px;
@@ -174,13 +203,19 @@ a:hover {
     margin: 0;
   }
   .navbar .navbar-menu {
-    display: none;
-  }
-  .navbar .navbar-menu[open] {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    animation: sweep 0.75s ease-in-out;
+    opacity: 0;
+    transform: var(--details-translate, translateY(-0.5em));
+    transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out, visibility 0s 0.75s;
+    visibility: collapse;
+  }
+  .navbar .navbar-menu[open] {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
+    visibility: visible;
   }
   .navbar .navbar-menu[open] .navbar-item {
     padding-top: 10px;

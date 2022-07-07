@@ -18,6 +18,22 @@ $large-breakpoint: 950px;
 $medium-breakpoint: 720px;
 $small-breakpoint: 480px;
 
+/* Accessibility stuff */
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	top: auto;
+	overflow: hidden;
+}
+
+:focus {
+	outline-width: 2px !important;
+	outline-style: dashed !important;
+	outline-offset: 0.25rem !important;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -38,23 +54,48 @@ canvas {
 
 details {
 	summary {
+		position: relative;
 		font-family: $font-secondary;
-		padding: 1em;
+		padding: 1em 1em 1em 2em;
 		background: $sand;
 		color: $white;
 		cursor: pointer;
-		outline: none;
 		border-radius: $small-radius;
 		transition: background-color 0.75s;
-		list-style-image: url("../assets/chevron-down.svg");
+		list-style-type: none;
+		&::-webkit-details-marker {
+			display: none;
+		}
+		&::before {
+			content: "\203A";
+			position: absolute;
+			top: 1.5rem;
+			left: 1rem;
+			transform: rotate(0);
+			transform-origin: 0.35rem 2px;
+			transition: 0.25s transform ease;
+			font-size: 2.25rem;
+			line-height: 0;
+		}
 		&:hover {
 			background: $light-sand;
 		}
+		&:focus {
+			outline-color: $sand;
+		}
+		~ * {
+			opacity: 0;
+			transform: var(--details-translate, translateY(-0.5em));
+			transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
+		}
 	}
 	&[open] summary {
-		list-style-image: url("../assets/chevron-up.svg");
+		&::before {
+			transform: rotate(90deg);
+		}
 		~ * {
-			animation: sweep 0.75s ease-in-out;
+			opacity: 1;
+			transform: none;
 		}
 	}
 }
@@ -67,26 +108,6 @@ a {
 	word-wrap: break-word;
 	&:hover {
 		text-decoration: none;
-	}
-}
-
-@keyframes sweep {
-	from {
-		opacity: 0;
-		transform: var(--details-translate, translateY(-0.5em));
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes reverse-sweep {
-	from {
-		opacity: 1;
-	}
-	to {
-		opacity: 0;
-		transform: var(--details-translate, translateY(-0.5em));
 	}
 }
 
@@ -112,6 +133,7 @@ a {
 	text-align: center;
 	border-radius: $large-radius;
 	transition: opacity 0.2s ease;
+	outline-color: #fff !important;
 	&:hover {
 		opacity: 0.5;
 	}
@@ -127,16 +149,19 @@ a {
 		align-items: center;
 		.navbar-item {
 			transition: opacity 0.2s ease;
+			outline-color: #fff !important;
 			&:hover {
 				opacity: 0.5;
 			}
 		}
 		.navbar-hamburger {
+			all: unset;
 			height: 23px;
 			width: 30px;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			cursor: pointer;
 			.line {
 				height: 2px;
 				width: 100%;
@@ -171,6 +196,9 @@ a {
 		order: 1;
 		display: flex;
 		align-items: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
 	}
 	.navbar-item {
 		margin: auto 15px;
@@ -197,12 +225,18 @@ a {
 			}
 		}
 		.navbar-menu {
-			display: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			opacity: 0;
+			transform: var(--details-translate, translateY(-0.5em));
+			transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out, visibility 0s 0.75s;
+			visibility: collapse;
 			&[open] {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				animation: sweep 0.75s ease-in-out;
+				opacity: 1;
+				transform: none;
+				transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
+				visibility: visible;
 				.navbar-item {
 					padding-top: 10px;
 				}

@@ -47,8 +47,8 @@
 	<body>
 		<div class="hero" id="titlehero">
 			<canvas id="canvas-image-blending"></canvas>
-			<div class="hero-head up-front">
-				<nav class="navbar" role="navigation">
+			<header class="hero-head up-front">
+				<nav class="navbar" role="navigation" aria-label="Main menu">
 					<div class="navbar-brand">
 						<a class="navbar-item" href="#top">
 							<picture>
@@ -57,23 +57,24 @@
 								<img src="./assets/echang.dev-light.png" width="148" height="22" />
 							</picture>
 						</a>
-						<div class="navbar-hamburger">
-							<span class="line"></span>
-							<span class="line"></span>
-							<span class="line"></span>
-						</div>
+						<button class="navbar-hamburger" aria-expanded="false">
+							<span class="line" focusable="false" aria-hidden="true"></span>
+							<span class="line" focusable="false" aria-hidden="true"></span>
+							<span class="line" focusable="false" aria-hidden="true"></span>
+							<span class="sr-only" focusable="false">Menu</span>
+						</button>
 					</div>
-					<div class="navbar-menu">
-						<span class="navbar-item">
+					<ul class="navbar-menu">
+						<li class="navbar-item">
 							<a href="#aboutMe"><strong>About Me</strong></a>
-						</span>
-						<span class="navbar-item">
+						</li>
+						<li class="navbar-item">
 							<a href="#work"><strong>Experience</strong></a>
-						</span>
-						<span class="navbar-item">
+						</li>
+						<li class="navbar-item">
 							<a href="#portfolio"><strong>Projects</strong></a>
-						</span>
-						<span class="navbar-item">
+						</li>
+						<li class="navbar-item">
 							<a href="https://github.com/echang49">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -93,8 +94,8 @@
 									</mask>
 								</svg>
 							</a>
-						</span>
-						<span class="navbar-item">
+						</li>
+						<li class="navbar-item">
 							<a href="https://www.linkedin.com/in/edwchang/">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -116,10 +117,10 @@
 									</mask>
 								</svg>
 							</a>
-						</span>
-					</div>
+						</li>
+					</ul>
 				</nav>
-			</div>
+			</header>
 			<div class="hero-body up-front">
 				<div>
 					<h1 class="title">EDWARD CHANG</h1>

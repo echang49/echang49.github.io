@@ -1,209 +1,346 @@
 <!DOCTYPE html>
-<html lang="en-UK" prefix="og: http://ogp.me/ns#">
-<head>
-    <link rel="stylesheet" href="./src/style.css">
-    <script src="./src/granim.min.js"></script>
-    <script src="./src/script.js"></script>
-    <link rel="icon" href="./assets/favicon.png">
-    <title> Edward Chang </title>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Edward Chang's portfolio with prior work experience, academic courses, personal projects, and his resume." />
-    <meta name="title" property="og:title" content="Edward Chang's Portfolio" />
-    <meta property="og:type" content="portfolio" />
-    <meta name="image" property="og:image" content="https://echang.dev/assets/portfolio.jpg" />
-    <meta name="description" property="og:description" content="Edward Chang's portfolio with prior work experience, academic courses, personal projects, and his resume." />
-    <meta name="author" content="Edward Chang" />
-</head>
-<body>
-    <div class="hero" id="titlehero">
-        <canvas id="canvas-image-blending"></canvas>
-        <div class="hero-head up-front">
-            <nav class="navbar" role="navigation">
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="index.html">
-                            <img src="./assets/echang.dev-light.png" width="148" height="22">
-                    </a>
-                    <div class="navbar-hamburger" onclick="toggleNavbar()">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                    </div>
-                </div>
-                <div class="navbar-menu">
-                    <span class="navbar-item">
-                        <a href="#aboutMe"><strong>About Me</strong></a> 
-                    </span>
-                    <span class="navbar-item">
-                        <a href="#work"><strong>Experience</strong></a> 
-                    </span>
-                    <span class="navbar-item">
-                        <a href="#portfolio"><strong>Projects</strong></a>
-                    </span>
-                    <span class="navbar-item">
-                        <a href="https://github.com/echang49">
-                            <img src="./assets/github-light.png" width="32" height="32">
-                        </a>
-                    </span>
-                    <span class="navbar-item">
-                        <a href="https://www.linkedin.com/in/edwchang/">
-                            <img src="./assets/linkedin-light.png" width="32" height="32">
-                        </a>
-                    </span>
-                </div>
-            </nav>
-        </div>
-        <div class="hero-body up-front">
-            <div>
-                <h1 class="title">EDWARD CHANG</h1>
-                <p class="subtitle">Software Developer</p>
-                <p><a class="button" href="./resume">Resume</a></p>
-            </div>
-        </div>
-    </div>
-    <div class="hero" id="section1">
-        <div class="hero-body">
-            <div class="main-width" id="aboutMe">
-                <div class="image">
-                    <img src="./assets/pp.jpg" height="400px" width="auto" />
-                </div>
-                <div class="description">
-                    <h2 class="title">About Me</h2>
-                    <p class="info"><strong>&#128075;Hello!&#128075;</strong> My name is Edward and I'm a <strong>full stack developer</strong> based out of London, Ontario. I like to make cool things that might one day have a big impact. I'm always thinking of a 
-                        thousand things to do and especially about my next big challenge. I currently work at <strong>Square Enix</strong> though I have previously worked at a consultancy and a start-up.</p>
-                    <p class="info">Outside of work and personal projects, I have two cats. Just like a parent, I'll show pictures of them to anyone who's willing.</p>
+<html lang="en-CA" prefix="og: http://ogp.me/ns#">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-                    <h3 class="subtitle">Currently Tinkering With:</h3>
-                    <ul>
-                        <li>TypeScript</li>
-                        <li>React</li>
-                        <li>Node.js</li>
-                        <li>JavaScript (ESM)</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>Artificial Intelligence</li>
-                        <li>C++</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="main-width" id="work">
-                <h2 class="title">Work</h2>
-                <p>Are you a recruiter and am impressed by what you see? Your company could be at the top of this list! &#127881;</p>
-                <hr />
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./assets/square-enix.jpg" height="auto" width="80px"/>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-header">
-                            <div>
-                                <h3>Online Services Programmer Intern</h3>
-                                <h4>Square Enix</h4>
-                            </div>
-                            <div>
-                                <p>Jan 2022 - Aug 2022</p>
-                                <p>Montréal, QC, Canada</p>
-                            </div>
-                        </div>
-                        
-                        <ul>
-                            <li>Developed a game progress telemetry tool providing every game team progess metrics.</li>
-                            <li>Building a client-side HTTP rate limiting tool to prevent downtime during peak user concurrency.</li>
-                            <li>Ensured feature parity and cross-compatlbility across different games and game platforms.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./assets/traction-on-demand.jpg" height="auto" width="80px"/>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-header">
-                            <div>
-                                <h3>Development Intern</h3>
-                                <h4>Traction on Demand</h4>
-                            </div>
-                            <div>
-                                <p>May 2021 - Dec 2021</p>
-                                <p>Burnaby, BC, Canada</p>
-                            </div>
-                        </div>
-                        <ul>
-                            <li>Solutioning and development of APEX components for project teams.</li>
-                            <li>Help other interns with declarative and custom development issues/bugs for projects.</li>
-                            <li>Achieved Salesforce Administrator Certificate.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="main-width" id="education">
-                <h2 class="title">Education</h2>
-                <hr />
-                <ul>
-                    <li>Software Engineering @ Western University</li>
-                    <li>Travel and Tourism @ Fanshawe College</li>
-                </ul>
-                <details>
-                    <summary>Notable Courses</summary>
-                    <p>While the bulk of the Software Engineering/Computer Science education between different universities is similar, these are courses I took that may deviate from a common education.</p>
-                    <ul>
-                        <li>ENGSCI3331 - Managing the Innovation Process</li>
-                        <li>COMPSCI4442 - Artificial Intelligence II</li>
-                        <li>SE4455 - Cloud Computing</li>
-                        <li>SE4472 - Information Security</li>
-                    </ul>    
-                </details>
-            </div>
-        </div>
-    </div>
-    <div class="hero" id="section2">
-        <div class="hero-body" id="portfolio">
-            <div class="main-width">
-                <!--SVG taken from carbon.now.sh-->
-                <h2 class="title">Projects</h2>
-                <br />
-                <div class="terminal">
-                    <div class="terminal-head">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg>
-                    </div>
-                    <div class="terminal-body">
-                        <div>
-                            <p class="terminal-header"><span class="terminal-secondary">visitor@echang.dev</span><span class="terminal-tertiary">:~$</span>node ./plannr.js</p>
-                            <p>Plannr - Current Development</p>
-                            <ul>
-                                <li>Travel planning web application that provides users a structured format on creating travel itineraries for where they want to go. Don't know where to go or what to do when there? Search for existing itineraries for insipiration!</li>
-                                <li>Developed with: TypeScript, Express, MongoDB, and Next.js</li>
-                                <li>Live website can be found here: <a href="https://plannr.ca/" target="_blank">https://plannr.ca/</a></li>
-                            </ul>
-                        </div>
-                        <p class="terminal-header">Terminate batch job (Y/N)? Y</p>
-                        <div>
-                            <p class="terminal-header"><span class="terminal-secondary">visitor@echang.dev</span><span class="terminal-tertiary">:~$</span>node ./lingothyme.js</p>
-                            <p>LingoThyme - Archived</p>
-                            <ul>
-                                <li>A collaborative learning web tool that strives to help users come up with solutions to problems, responses to questions, and ideas. Users join private rooms, are given a question/problem to tackle, brainstorm as a team, and then write individual solutions whilst bouncing ideas off each other. At the end of the session, the administrator is sent a user friendly PDF of the session to their email which they can later forward to the participants.</li>
-                                <li>Developed with: JavaScript, Express, MongoDB, React, and WebSocket.</li>
-                                <li>Github repository can be found here: <a href="https://github.com/echang49/lingothyme-note-taking" target="_blank">https://github.com/echang49/lingothyme-note-taking</a></li>
-                            </ul>
-                        </div>
-                        <p class="terminal-header">Terminate batch job (Y/N)? Y</p>
-                        <div>
-                            <p class="terminal-header"><span class="terminal-secondary">visitor@echang.dev</span><span class="terminal-tertiary">:~$</span>./cv-creator.sh</p>
-                            <p>CV-Creator - Archived</p>
-                            <ul>
-                                <li>A desktop productivity tool that tailors a job application to match the keywords on a job posting so that the job application passes the automatic ATS screening.</li>
-                                <li>Developed with: JavaScript, React, Electron, Web Scraping, Python, and NLP.</li>
-                                <li>Github repository can be found here: <a href="https://github.com/echang49/CV-Creator" target="_blank">https://github.com/echang49/CV-Creator</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-foot">
-            <p>Version 4.7</p>
-        </div>
-    </div>
-</body>
+		<!-- https://realfavicongenerator.net/favicon_result?file_id=p1g7cegn6f18j1g4v1r4pl7813hb6 -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ddb439" />
+		<meta name="msapplication-TileColor" content="#ddb439" />
+		<meta name="theme-color" content="#ddb439" />
+
+		<!-- Primary Meta Tags -->
+		<title>Edward Chang</title>
+		<meta name="title" property="og:title" content="Edward Chang's Portfolio" />
+		<meta
+			name="description"
+			property="og:description"
+			content="Edward Chang's portfolio with prior work experience, academic courses, personal projects, and his resume."
+		/>
+		<meta name="author" content="Edward Chang" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="portfolio" />
+		<meta property="og:url" content="https://echang.dev/" />
+		<meta property="og:image" content="https://echang.dev/assets/portfolio.jpg" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+
+		<link rel="stylesheet" href="./src/style.css" />
+		<script src="./src/granim.min.js"></script>
+		<script async defer src="./src/script.js"></script>
+
+		<script
+			async
+			defer
+			data-website-id="53746fce-2afb-4d14-9b03-7ea2939d42a1"
+			src="https://umami.jakobbouchard.dev/sherlock.js"
+			data-domains="echang.dev"
+		></script>
+	</head>
+	<body>
+		<div class="hero" id="titlehero">
+			<canvas id="canvas-image-blending"></canvas>
+			<header class="hero-head up-front">
+				<nav class="navbar" role="navigation" aria-label="Main menu">
+					<div class="navbar-brand">
+						<a class="navbar-item" href="#top">
+							<picture>
+								<source srcset="./assets/echang.dev-light.webp" type="image/webp" />
+								<source srcset="./assets/echang.dev-light.png" type="image/png" />
+								<img src="./assets/echang.dev-light.png" width="148" height="22" />
+							</picture>
+						</a>
+						<button class="navbar-hamburger" aria-expanded="false">
+							<span class="line" focusable="false" aria-hidden="true"></span>
+							<span class="line" focusable="false" aria-hidden="true"></span>
+							<span class="line" focusable="false" aria-hidden="true"></span>
+							<span class="sr-only" focusable="false">Menu</span>
+						</button>
+					</div>
+					<ul class="navbar-menu">
+						<li class="navbar-item">
+							<a href="#aboutMe"><strong>About Me</strong></a>
+						</li>
+						<li class="navbar-item">
+							<a href="#work"><strong>Experience</strong></a>
+						</li>
+						<li class="navbar-item">
+							<a href="#portfolio"><strong>Projects</strong></a>
+						</li>
+						<li class="navbar-item">
+							<a href="https://github.com/echang49">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									aria-label="GitHub"
+									role="img"
+									width="32px"
+									height="32px"
+									viewBox="0 0 512 512"
+								>
+									<rect width="512" height="512" rx="15%" fill="#fff" mask="url(#octocat)" />
+									<mask id="octocat">
+										<rect width="512" height="512" fill="#fff" />
+										<path
+											fill="#000"
+											d="M335 499c14 0 12 17 12 17H165s-2-17 12-17c13 0 16-6 16-12l-1-44c-71 16-86-34-86-34-12-30-28-37-28-37-24-16 1-16 1-16 26 2 40 26 40 26 22 39 59 28 74 22 2-17 9-28 16-35-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-32 3-67 0 0 21-7 70 26 42-12 86-12 128 0 49-33 70-26 70-26 14 35 6 61 3 67 16 18 26 41 26 69 0 98-60 120-117 126 10 8 18 24 18 48l-1 70c0 6 3 12 16 12z"
+										/>
+									</mask>
+								</svg>
+							</a>
+						</li>
+						<li class="navbar-item">
+							<a href="https://www.linkedin.com/in/edwchang/">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									aria-label="LinkedIn"
+									role="img"
+									width="32px"
+									height="32px"
+									viewBox="0 0 512 512"
+								>
+									<rect width="512" height="512" rx="15%" fill="#fff" mask="url(#linkedin-in)" />
+									<mask id="linkedin-in">
+										<rect width="512" height="512" fill="#fff" />
+										<circle fill="#000" cx="142" cy="138" r="37" />
+										<path stroke="#000" stroke-width="66" d="M244 194v198M142 194v198" />
+										<path
+											fill="#000"
+											d="M276 282c0-20 13-40 36-40 24 0 33 18 33 45v105h66V279c0-61-32-89-76-89-34 0-51 19-59 32"
+										/>
+									</mask>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div class="hero-body up-front">
+				<div>
+					<h1 class="title">EDWARD CHANG</h1>
+					<p class="subtitle">Software Developer</p>
+					<p><a class="button" href="./resume">Resume</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="hero" id="section1">
+			<div class="hero-body">
+				<div class="main-width" id="aboutMe">
+					<div class="image">
+						<picture>
+							<source srcset="./assets/pp.webp" type="image/webp" />
+							<source srcset="./assets/pp.jpg" type="image/jpeg" />
+							<img src="./assets/pp.jpg" height="400px" width="auto" />
+						</picture>
+					</div>
+					<div class="description">
+						<h2 class="title">About Me</h2>
+						<p class="info">
+							<strong>&#128075;Hello!&#128075;</strong> My name is Edward and I'm a
+							<strong>full stack developer</strong> based out of London, Ontario. I like to make cool things that might
+							one day have a big impact. I'm always thinking of a thousand things to do and especially about my next big
+							challenge. I currently work at <strong>Square Enix</strong> though I have previously worked at a
+							consultancy and a start-up.
+						</p>
+						<p class="info">
+							Outside of work and personal projects, I have two cats. Just like a parent, I'll show pictures of them to
+							anyone who's willing.
+						</p>
+
+						<h3 class="subtitle">Currently Tinkering With:</h3>
+						<ul>
+							<li>TypeScript</li>
+							<li>React</li>
+							<li>Node.js</li>
+							<li>JavaScript (ESM)</li>
+							<li>Python</li>
+							<li>Java</li>
+							<li>Artificial Intelligence</li>
+							<li>C++</li>
+						</ul>
+					</div>
+				</div>
+				<div class="main-width" id="work">
+					<h2 class="title">Work</h2>
+					<p>
+						Are you a recruiter and am impressed by what you see? Your company could be at the top of this list!
+						&#127881;
+					</p>
+					<hr />
+					<div class="card">
+						<div class="card-image">
+							<picture>
+								<source srcset="./assets/square-enix.webp" type="image/webp" />
+								<source src="./assets/square-enix.jpg" type="image/jpeg" />
+								<img src="./assets/square-enix.jpg" height="auto" width="80px" />
+							</picture>
+						</div>
+						<div class="card-body">
+							<div class="card-header">
+								<div>
+									<h3>Online Services Programmer Intern</h3>
+									<h4>Square Enix</h4>
+								</div>
+								<div>
+									<p>Jan 2022 - Aug 2022</p>
+									<p>Montréal, QC, Canada</p>
+								</div>
+							</div>
+
+							<ul>
+								<li>Developed a game progress telemetry tool providing every game team progess metrics.</li>
+								<li>
+									Building a client-side HTTP rate limiting tool to prevent downtime during peak user concurrency.
+								</li>
+								<li>Ensured feature parity and cross-compatlbility across different games and game platforms.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-image">
+							<picture>
+								<source srcset="./assets/traction-on-demand.webp" type="image/webp" />
+								<source srcset="./assets/traction-on-demand.jpg" type="image/jpeg" />
+								<img src="./assets/traction-on-demand.jpg" height="auto" width="80px" />
+							</picture>
+						</div>
+						<div class="card-body">
+							<div class="card-header">
+								<div>
+									<h3>Development Intern</h3>
+									<h4>Traction on Demand</h4>
+								</div>
+								<div>
+									<p>May 2021 - Dec 2021</p>
+									<p>Burnaby, BC, Canada</p>
+								</div>
+							</div>
+							<ul>
+								<li>Solutioning and development of APEX components for project teams.</li>
+								<li>Help other interns with declarative and custom development issues/bugs for projects.</li>
+								<li>Achieved Salesforce Administrator Certificate.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="main-width" id="education">
+					<h2 class="title">Education</h2>
+					<hr />
+					<ul>
+						<li>Software Engineering @ Western University</li>
+						<li>Travel and Tourism @ Fanshawe College</li>
+					</ul>
+					<details>
+						<summary>Notable Courses</summary>
+						<p>
+							While the bulk of the Software Engineering/Computer Science education between different universities is
+							similar, these are courses I took that may deviate from a common education.
+						</p>
+						<ul>
+							<li>ENGSCI3331 - Managing the Innovation Process</li>
+							<li>COMPSCI4442 - Artificial Intelligence II</li>
+							<li>SE4455 - Cloud Computing</li>
+							<li>SE4472 - Information Security</li>
+						</ul>
+					</details>
+				</div>
+			</div>
+		</div>
+		<div class="hero" id="section2">
+			<div class="hero-body" id="portfolio">
+				<div class="main-width">
+					<!--SVG taken from carbon.now.sh-->
+					<h2 class="title">Projects</h2>
+					<br />
+					<div class="terminal">
+						<div class="terminal-head">
+							<svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14">
+								<g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+									<circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle>
+									<circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle>
+									<circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle>
+								</g>
+							</svg>
+						</div>
+						<div class="terminal-body">
+							<div>
+								<p class="terminal-header">
+									<span class="terminal-secondary">visitor@echang.dev</span
+									><span class="terminal-tertiary">:~$</span>node ./plannr.js
+								</p>
+								<p>Plannr - Current Development</p>
+								<ul>
+									<li>
+										Travel planning web application that provides users a structured format on creating travel
+										itineraries for where they want to go. Don't know where to go or what to do when there? Search for
+										existing itineraries for insipiration!
+									</li>
+									<li>Developed with: TypeScript, Express, MongoDB, and Next.js</li>
+									<li>
+										Live website can be found here: <a href="https://plannr.ca/" target="_blank">https://plannr.ca/</a>
+									</li>
+								</ul>
+							</div>
+							<p class="terminal-header">Terminate batch job (Y/N)? Y</p>
+							<div>
+								<p class="terminal-header">
+									<span class="terminal-secondary">visitor@echang.dev</span
+									><span class="terminal-tertiary">:~$</span>node ./lingothyme.js
+								</p>
+								<p>LingoThyme - Archived</p>
+								<ul>
+									<li>
+										A collaborative learning web tool that strives to help users come up with solutions to problems,
+										responses to questions, and ideas. Users join private rooms, are given a question/problem to tackle,
+										brainstorm as a team, and then write individual solutions whilst bouncing ideas off each other. At
+										the end of the session, the administrator is sent a user friendly PDF of the session to their email
+										which they can later forward to the participants.
+									</li>
+									<li>Developed with: JavaScript, Express, MongoDB, React, and WebSocket.</li>
+									<li>
+										Github repository can be found here:
+										<a href="https://github.com/echang49/lingothyme-note-taking" target="_blank"
+											>https://github.com/echang49/lingothyme-note-taking</a
+										>
+									</li>
+								</ul>
+							</div>
+							<p class="terminal-header">Terminate batch job (Y/N)? Y</p>
+							<div>
+								<p class="terminal-header">
+									<span class="terminal-secondary">visitor@echang.dev</span
+									><span class="terminal-tertiary">:~$</span>./cv-creator.sh
+								</p>
+								<p>CV-Creator - Archived</p>
+								<ul>
+									<li>
+										A desktop productivity tool that tailors a job application to match the keywords on a job posting so
+										that the job application passes the automatic ATS screening.
+									</li>
+									<li>Developed with: JavaScript, React, Electron, Web Scraping, Python, and NLP.</li>
+									<li>
+										Github repository can be found here:
+										<a href="https://github.com/echang49/CV-Creator" target="_blank"
+											>https://github.com/echang49/CV-Creator</a
+										>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hero-foot">
+				<p>
+					Version 4.8 | <a href="https://umami.jakobbouchard.dev/share/RbCKUtt3/echang.dev" target="_blank">Stats</a>
+				</p>
+			</div>
+		</div>
+	</body>
 </html>

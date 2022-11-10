@@ -50,6 +50,7 @@ canvas {
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	mix-blend-mode: multiply;
 }
 
 details {
@@ -190,6 +191,9 @@ a {
 					transform: rotate(-45deg);
 				}
 			}
+			&:focus {
+				outline-width: 0px!important;
+			}
 		}
 	}
 	.navbar-menu {
@@ -211,7 +215,7 @@ a {
 			}
 		}
 	}
-	@media screen and (min-width: $medium-breakpoint + 1px) {
+	@media screen and (min-width: calc($medium-breakpoint + 1px)) {
 		.navbar-brand .navbar-hamburger {
 			display: none;
 		}
@@ -320,6 +324,12 @@ a {
 #titlehero {
 	color: $light;
 	min-height: 100vh;
+	background-image: url("../assets/bg.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: relative;
+    background-size: cover;
+
 	.hero-body {
 		flex-direction: row;
 		margin: auto 15vw;

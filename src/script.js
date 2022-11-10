@@ -1,31 +1,23 @@
 document.addEventListener("DOMContentLoaded", init);
 function init() {
 	new Granim({
-		element: "#canvas-image-blending",
-		name: "granim",
-		elToSetClassOn: "body",
+		element: "#canvas-granim",
 		direction: "diagonal",
 		isPausedWhenNotInView: false,
-		scrollDebounceThreshold: 300,
-		stateTransitionSpeed: 1000,
-		image: {
-			source: supportsWebp() ? "./assets/bg.webp" : "./assets/bg.jpg",
-			blendingMode: "multiply",
-		},
 		states: {
 			"default-state": {
 				gradients: [
-					["rgba(197, 211, 247, 1)", "rgba(197, 235, 235, 1)"],
-					["rgba(64, 41, 181, .8)", "rgba(204, 208, 255, 1)"],
-					["rgba(28, 18, 81, .95)", "rgba(98, 89, 178, .95)"],
-					["rgba(23, 23, 33, .90)", "rgba(28, 18, 81, .95)"],
-					["rgba(17, 14, 33, .85)", "rgba(33, 33, 53, .80)"],
-					["rgba(25, 17, 178, .8)", "rgba(28, 18, 81, .85)"],
-					["rgba(126, 124, 175, 1)", "rgba(25, 17, 178, .80)"],
-					["rgba(255, 58, 96, .7)", "rgba(255, 155, 158, .6)"],
-					["rgba(255, 125, 33, .5)", "rgba(255, 102, 104, .5)"],
-					["rgba(150, 255, 178, .5)", "rgba(200, 240, 150, .5)"],
-					["rgba(198, 181, 255, 1)", "rgba(205, 232, 252, 1)"],
+					["#c5d3f7", "#c5ebeb"],
+					["#4029b5", "#ccd0ff"],
+					["#1c1251", "#6259b2"],
+					["#171721", "#1c1251"],
+					["#110e21", "#212135"],
+					["#1911b2", "#1c1251"],
+					["#7e7caf", "#1911b2"],
+					["#ff3a60", "#ff9b9e"],
+					["#ff7d21", "#ff6668"],
+					["#96ffb2", "#c8f096"],
+					["#c6b5ff", "#cde8fc"],
 				],
 				transitionSpeed: 3000,
 				loop: true,
@@ -46,18 +38,6 @@ function init() {
 			burger.setAttribute("aria-expanded", true);
 			burger.setAttribute("open", "");
 			menu.setAttribute("open", "");
-		}
-	}
-
-	function supportsWebp() {
-		const elem = document.createElement("canvas");
-
-		if (!!(elem.getContext && elem.getContext("2d"))) {
-			// was able or not to get WebP representation
-			return elem.toDataURL("image/webp").indexOf("data:image/webp") == 0;
-		} else {
-			// very old browser like IE 8, canvas not supported
-			return false;
 		}
 	}
 }

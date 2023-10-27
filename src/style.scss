@@ -1,7 +1,7 @@
 $dark: hsl(0, 0%, 21%);
 $light: hsl(0, 0%, 90%);
 $white: hsl(0, 0%, 100%);
-$sand: #a0785b;
+$sand: #c1916e;
 $light-sand: #d1a077;
 $terminal-primary: #815e94;
 $terminal-secondary: #d53282;
@@ -284,11 +284,10 @@ a {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			h3,
-			h4 {
+			.left > h3, h4, p {
 				margin: 5px 0;
 			}
-			p {
+			.right > p {
 				text-align: right;
 				margin: 2px 0;
 				font-weight: 500;
@@ -296,6 +295,7 @@ a {
 		}
 		ul {
 			padding-left: 20px;
+			text-align: justify;
 		}
 	}
 	@media screen and (max-width: $small-breakpoint) {

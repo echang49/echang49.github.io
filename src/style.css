@@ -23,7 +23,7 @@ html {
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: hsl(0deg, 0%, 21%);
+  color: hsl(0, 0%, 21%);
 }
 
 canvas {
@@ -38,8 +38,8 @@ details summary {
   position: relative;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   padding: 1em 1em 1em 2em;
-  background: #a0785b;
-  color: hsl(0deg, 0%, 100%);
+  background: #c1916e;
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.75s;
@@ -63,7 +63,7 @@ details summary:hover {
   background: #d1a077;
 }
 details summary:focus {
-  outline-color: #a0785b;
+  outline-color: #c1916e;
 }
 details summary ~ * {
   opacity: 0;
@@ -105,8 +105,8 @@ a:hover {
 .button {
   all: unset;
   padding: 0.4em 1em;
-  background-color: hsl(0deg, 0%, 90%);
-  color: hsl(0deg, 0%, 21%);
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(0, 0%, 21%);
   cursor: pointer;
   text-align: center;
   border-radius: 25px;
@@ -147,7 +147,7 @@ a:hover {
   height: 2px;
   width: 100%;
   border-radius: 10px;
-  background: hsl(0deg, 0%, 90%);
+  background: hsl(0, 0%, 90%);
 }
 .navbar .navbar-brand .navbar-hamburger .line:nth-child(1) {
   transform-origin: 0% 0%;
@@ -251,7 +251,7 @@ a:hover {
   display: flex;
   align-items: center;
   border-radius: 5px;
-  box-shadow: 3px 3px 5px 5px hsl(0deg, 0%, 90%);
+  box-shadow: 3px 3px 5px 5px hsl(0, 0%, 90%);
 }
 .card .card-image {
   margin-right: 30px;
@@ -264,17 +264,17 @@ a:hover {
   justify-content: space-between;
   align-items: center;
 }
-.card .card-body .card-header h3,
-.card .card-body .card-header h4 {
+.card .card-body .card-header .left > h3, .card .card-body .card-header h4, .card .card-body .card-header p {
   margin: 5px 0;
 }
-.card .card-body .card-header p {
+.card .card-body .card-header .right > p {
   text-align: right;
   margin: 2px 0;
   font-weight: 500;
 }
 .card .card-body ul {
   padding-left: 20px;
+  text-align: justify;
 }
 @media screen and (max-width: 480px) {
   .card {
@@ -303,7 +303,7 @@ a:hover {
 
 /* Block */
 #titlehero {
-  color: hsl(0deg, 0%, 90%);
+  color: hsl(0, 0%, 90%);
   min-height: 100vh;
   background-image: url("../assets/bg.jpg");
   background-position: center center;
@@ -324,11 +324,11 @@ a:hover {
     transform: translate(-50%, -50%);
   }
   #titlehero .hero-body h1,
-#titlehero .hero-body p {
+  #titlehero .hero-body p {
     text-align: center;
   }
   #titlehero .hero-body .title,
-#titlehero .hero-body .subtitle {
+  #titlehero .hero-body .subtitle {
     margin: 2vh 0;
   }
 }
@@ -359,7 +359,7 @@ a:hover {
   }
 }
 #section1 #aboutMe .image img {
-  border: 2px solid hsl(0deg, 0%, 21%);
+  border: 2px solid hsl(0, 0%, 21%);
 }
 #section1 #aboutMe .description {
   order: 1;
@@ -409,8 +409,8 @@ a:hover {
 }
 
 #section2 {
-  background-color: #a0785b;
-  color: hsl(0deg, 0%, 100%);
+  background-color: #c1916e;
+  color: hsl(0, 0%, 100%);
 }
 #section2 .terminal {
   display: flex;
@@ -427,7 +427,7 @@ a:hover {
   color: #d53282;
 }
 #section2 .terminal .terminal-tertiary {
-  color: hsl(0deg, 0%, 21%);
+  color: hsl(0, 0%, 21%);
   margin-right: 10px;
 }
 #section2 .terminal .terminal-header {
